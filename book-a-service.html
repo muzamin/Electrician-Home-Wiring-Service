@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Master Electrician Service | VoltGuard Certified Electrical</title>
+  <meta name="description"
+    content="Book licensed master electricians for rapid residential wiring, switchboard repair, and architectural lighting installations.">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- Core Stylesheets & Custom Booking Styling -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="standard_header.css">
+  <link rel="stylesheet" href="book-a-service.css">
+</head>
+
+<body class="booking-page-body">
+
+  <!-- Luxury Ambient Background Atmosphere -->
+  <div class="booking-bg-glows" aria-hidden="true">
+    <div class="bg-glow-orb bg-glow-orb-primary"></div>
+    <div class="bg-glow-orb bg-glow-orb-secondary"></div>
+    <div class="bg-glow-orb bg-glow-orb-accent"></div>
+    <div class="bg-grid-mesh"></div>
+  </div>
+
+  <!-- Main Booking Terminal -->
+  <main class="booking-main-wrapper">
+    <div class="booking-card-glass">
+
+      <!-- Card Top Right Toggles: Theme & RTL -->
+      <div class="card-top-nav">
+        <div class="top-toggles-container">
+          <!-- 1. Theme Toggle (40x40 icon button) -->
+          <button type="button" class="header-icon-btn theme-btn" id="themeToggleBtn" aria-label="Switch Theme"
+            title="Toggle Theme (Dark / Light)">
+            <!-- Sun Icon (Active in Dark mode) -->
+            <svg class="theme-icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <!-- Moon Icon (Active in Light mode) -->
+            <svg class="theme-icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <span class="sr-only">Toggle Theme</span>
+          </button>
+
+          <!-- 2. RTL Toggle Button (40x40 size) -->
+          <button type="button" class="header-icon-btn rtl-btn" id="rtlToggleBtn"
+            aria-label="Toggle Right to Left direction" title="Toggle RTL / LTR layout">
+            <span class="rtl-label">RTL</span>
+            <span class="sr-only">Toggle RTL</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Center Aligned Logo & Brand Name Inside The Card -->
+      <div class="card-brand-center">
+        <a href="index.html" class="brand-anchor-center" aria-label="VoltGuard Electrician &amp; Home Wiring">
+          <div class="brand-logo-symbol-lg">
+            <img src="logo.png" alt="VoltGuard Electrician &amp; Home Wiring Logo" class="brand-logo-img" width="68"
+              height="68">
+          </div>
+          <div class="brand-text-block-center">
+            <h1 class="brand-title-lg">Volt<span>Guard</span></h1>
+            <span class="brand-subtitle-lg">Electrician &amp; Home Wiring</span>
+          </div>
+        </a>
+        <div class="brand-status-pill">
+          <span class="status-live-dot" aria-hidden="true"></span>
+          <span>Licensed Master Electricians &bull; 24/7 Rapid Dispatch</span>
+        </div>
+      </div>
+
+      <!-- View 1: Booking Form -->
+      <div id="bookingFormView">
+        <div class="booking-header-block">
+          <span class="booking-badge-tag">Direct Rapid Booking</span>
+          <h2 class="booking-card-title">Schedule Certified Electrical Service</h2>
+          <p class="booking-card-subtitle">
+            Choose your service below and receive priority dispatch within 15 minutes. Transparent upfront flat rates with a 100% satisfaction guarantee.
+          </p>
+        </div>
+
+        <form id="voltguardBookingForm" novalidate>
+          <input type="hidden" id="selectedServiceInput" value="Whole-Home Rewiring &amp; Copper Overhaul">
+          <input type="hidden" id="selectedUrgencyInput" value="standard">
+
+          <!-- 1. Interactive Service Category Selection Grid (3 Core Services) -->
+          <div class="section-subtitle-label">
+            <span>1. Select Electrical Service Required <span class="req-star">*</span></span>
+            <small style="color:var(--text-muted); font-size:0.8rem;">Click to choose</small>
+          </div>
+
+          <div class="services-grid-selector">
+            <!-- Service 1: Whole-Home Rewiring -->
+            <button type="button" class="service-tile-btn selected" data-service-key="wiring"
+              data-service-name="Whole-Home Rewiring &amp; Copper Overhaul" data-service-price="From $280"
+              aria-pressed="true">
+              <div class="service-tile-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+              </div>
+              <div class="service-tile-text">
+                <span class="service-tile-title">Whole-Home Rewiring</span>
+                <span class="service-tile-desc">Solid copper conductors, code upgrades &amp; hazardous line replacement.</span>
+                <span class="service-tile-price">From $280</span>
+              </div>
+              <div class="tile-check-indicator" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            </button>
+
+            <!-- Service 2: Fan & Light Fitting -->
+            <button type="button" class="service-tile-btn" data-service-key="fan-light"
+              data-service-name="Fan &amp; Architectural Light Fitting" data-service-price="From $140"
+              aria-pressed="false">
+              <div class="service-tile-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="5" />
+                  <line x1="12" y1="1" x2="12" y2="3" />
+                  <line x1="12" y1="21" x2="12" y2="23" />
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                  <line x1="1" y1="12" x2="3" y2="12" />
+                  <line x1="21" y1="12" x2="23" y2="12" />
+                </svg>
+              </div>
+              <div class="service-tile-text">
+                <span class="service-tile-title">Fan &amp; Light Fitting</span>
+                <span class="service-tile-desc">Heavy-duty ceiling fans, chandeliers &amp; smart circadian LED downlights.</span>
+                <span class="service-tile-price">From $140</span>
+              </div>
+              <div class="tile-check-indicator" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            </button>
+
+            <!-- Service 3: Switchboard & Panel Upgrade -->
+            <button type="button" class="service-tile-btn" data-service-key="switchboard"
+              data-service-name="Switchboard Repair &amp; 200A Breaker Upgrades" data-service-price="From $450"
+              aria-pressed="false">
+              <div class="service-tile-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="18" rx="2" />
+                  <line x1="7" y1="7" x2="7" y2="17" />
+                  <line x1="12" y1="7" x2="12" y2="17" />
+                  <line x1="17" y1="7" x2="17" y2="17" />
+                </svg>
+              </div>
+              <div class="service-tile-text">
+                <span class="service-tile-title">Switchboard &amp; Panel Upgrade</span>
+                <span class="service-tile-desc">200A breaker panels, dual AFCI/GFCI protection &amp; surge units.</span>
+                <span class="service-tile-price">From $450</span>
+              </div>
+              <div class="tile-check-indicator" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            </button>
+          </div>
+
+          <!-- 2. Urgency Selection (Standard vs 15-Min Priority Dispatch) -->
+          <div class="section-subtitle-label">
+            <span>2. Dispatch Urgency</span>
+          </div>
+          <div class="urgency-selection-container">
+            <button type="button" class="urgency-card-btn selected" data-urgency="standard">
+              <div class="urgency-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+              </div>
+              <div>
+                <span class="urgency-title">Scheduled Service</span>
+                <span class="urgency-desc">Select preferred day &amp; convenient arrival window.</span>
+              </div>
+            </button>
+
+            <button type="button" class="urgency-card-btn emergency-tier" data-urgency="emergency">
+              <div class="urgency-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+              </div>
+              <div>
+                <span class="urgency-title">⚡ 15-Min Emergency Priority</span>
+                <span class="urgency-desc">Mobile unit dispatched immediately to your address.</span>
+              </div>
+            </button>
+          </div>
+
+          <div class="form-section-divider"></div>
+
+          <!-- 3. Preferred Date & Time Slot -->
+          <div class="form-two-col">
+            <div class="form-group-custom">
+              <label for="bookingDate" class="form-label-custom">
+                Preferred Date <span class="req">*</span>
+              </label>
+              <div class="input-with-icon">
+                <span class="input-icon-left" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                  </svg>
+                </span>
+                <input type="date" id="bookingDate" class="form-control-luxury" required>
+              </div>
+            </div>
+
+            <div class="form-group-custom">
+              <label for="bookingTimeSlot" class="form-label-custom">
+                Preferred Arrival Window <span class="req">*</span>
+              </label>
+              <div class="input-with-icon">
+                <span class="input-icon-left" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                </span>
+                <select id="bookingTimeSlot" class="form-control-luxury" required>
+                  <option value="Morning (8:00 AM – 12:00 PM)">Morning Window (8:00 AM – 12:00 PM)</option>
+                  <option value="Afternoon (12:00 PM – 4:00 PM)">Afternoon Window (12:00 PM – 4:00 PM)</option>
+                  <option value="Evening (4:00 PM – 8:00 PM)">Evening Window (4:00 PM – 8:00 PM)</option>
+                  <option value="Immediate 24/7 Priority">Immediate Priority (Next Available Mobile Van)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Contact & Location Information -->
+          <div class="form-two-col">
+            <div class="form-group-custom">
+              <label for="customerName" class="form-label-custom">
+                Your Full Name <span class="req">*</span>
+              </label>
+              <div class="input-with-icon">
+                <span class="input-icon-left" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                </span>
+                <input type="text" id="customerName" class="form-control-luxury" placeholder="e.g. Michael Scott"
+                  required>
+              </div>
+            </div>
+
+            <div class="form-group-custom">
+              <label for="customerPhone" class="form-label-custom">
+                Phone Number (For 15-min Dispatch Confirmation) <span class="req">*</span>
+              </label>
+              <div class="input-with-icon">
+                <span class="input-icon-left" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </span>
+                <input type="tel" id="customerPhone" class="form-control-luxury" placeholder="(555) 234-5678" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-two-col">
+            <div class="form-group-custom">
+              <label for="customerEmail" class="form-label-custom">
+                Email Address (For Booking Confirmation &amp; Invoice) <span class="req">*</span>
+              </label>
+              <div class="input-with-icon">
+                <span class="input-icon-left" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </span>
+                <input type="email" id="customerEmail" class="form-control-luxury"
+                  placeholder="michael@company.example" required>
+              </div>
+            </div>
+
+            <div class="form-group-custom">
+              <label for="customerAddress" class="form-label-custom">
+                Service Address / Neighborhood Zip Code <span class="req">*</span>
+              </label>
+              <div class="input-with-icon">
+                <span class="input-icon-left" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </span>
+                <input type="text" id="customerAddress" class="form-control-luxury"
+                  placeholder="e.g. 742 Evergreen Terrace, Metro Circuit" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Issue Details -->
+          <div class="form-group-custom">
+            <label for="projectDetails" class="form-label-custom">
+              Electrical Issue Details or Specific Requirements (Optional)
+            </label>
+            <textarea id="projectDetails" class="form-control-luxury"
+              placeholder="Tell us what is happening (e.g., buzzing breaker, aluminum wire conversion, new fixture installation)..."></textarea>
+          </div>
+
+          <!-- 6. Live Service Estimate & Summary Banner -->
+          <div class="booking-summary-banner">
+            <div class="summary-details">
+              <span class="summary-label">Selected Booking Plan</span>
+              <span class="summary-service-name" id="summaryServiceName">Whole-Home Rewiring &amp; Copper Overhaul</span>
+              <span class="summary-dispatch-note" id="summaryDispatchNote">Scheduled appointment with 2-hour arrival window.</span>
+            </div>
+            <div class="summary-price-box">
+              <span class="summary-estimate-caption">Transparent Base Rate</span>
+              <span class="summary-estimate-val" id="summaryEstimateVal">From $280</span>
+            </div>
+          </div>
+
+          <!-- 7. Trust Badges Strip -->
+          <div class="trust-badges-strip" aria-label="VoltGuard Guarantees">
+            <div class="trust-badge-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              <span>State Licensed &amp; Insured</span>
+            </div>
+            <div class="trust-badge-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span>Sub-20 Min Priority Dispatch</span>
+            </div>
+            <div class="trust-badge-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+              <span>100% Upfront Flat Pricing</span>
+            </div>
+            <div class="trust-badge-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+              <span>Lifetime Workmanship Warranty</span>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-booking-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>Confirm Booking &amp; Dispatch Master Electrician</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- View 2: Interactive Instant Booking Success Screen -->
+      <div id="bookingSuccessView" class="booking-success-view">
+        <div class="success-badge-symbol" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h2 class="success-title">Your Service Request is Confirmed!</h2>
+        <p class="success-subtitle">
+          A licensed VoltGuard master electrician has been notified. Our rapid dispatch supervisor is preparing the mobile van and will call you within 15 minutes to confirm technician arrival.
+        </p>
+
+        <!-- Digital Booking Pass / Receipt -->
+        <div class="booking-ticket-card">
+          <div class="ticket-header-row">
+            <span class="ticket-ref-title">Dispatch Reference Code</span>
+            <span class="ticket-ref-number" id="ticketRefNumber">VG-2026-8941</span>
+          </div>
+          <div class="ticket-data-grid">
+            <div class="ticket-data-item">
+              <span class="t-label">Service Type</span>
+              <span class="t-value" id="ticketService">Whole-Home Rewiring</span>
+            </div>
+            <div class="ticket-data-item">
+              <span class="t-label">Appointment Time</span>
+              <span class="t-value" id="ticketDateTime">Today &bull; Morning Window</span>
+            </div>
+            <div class="ticket-data-item">
+              <span class="t-label">Service Location</span>
+              <span class="t-value" id="ticketAddress">742 Evergreen Terrace</span>
+            </div>
+            <div class="ticket-data-item">
+              <span class="t-label">Contact Client</span>
+              <span class="t-value" id="ticketContact">Michael Scott ((555) 234-5678)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="success-actions-row">
+          <a href="tel:8005550199" class="submit-booking-btn" style="width:auto; padding: 14px 28px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span>Direct 24/7 Hotline: (800) 555-0199</span>
+          </a>
+
+          <a href="index.html" class="btn-secondary-custom">
+            <span>Return to Homepage</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Interactive Toast Notification -->
+  <div class="toast-notification" id="toastNotification" role="alert" aria-live="polite">
+    <div class="toast-indicator-dot" aria-hidden="true"></div>
+    <span class="toast-message" id="toastMessage">Notification</span>
+  </div>
+
+  <!-- Custom Booking Page Script -->
+  <script src="book-a-service.js"></script>
+</body>
+
+</html>

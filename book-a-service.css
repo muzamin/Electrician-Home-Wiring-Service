@@ -1,0 +1,1014 @@
+/**
+ * ============================================================================
+ * VOLTGUARD - DEDICATED PREMIUM "BOOK A SERVICE" PAGE
+ * book-a-service.css
+ * ============================================================================
+ */
+
+/* --------------------------------------------------------------------------
+   1. Page Layout & Background Atmosphere
+   -------------------------------------------------------------------------- */
+body.booking-page-body {
+  margin: 0;
+  padding: 40px 16px;
+  min-height: 100vh;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-family-base);
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+/* Luxury Ambient Background Glows */
+.booking-bg-glows {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bg-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.25;
+  transition: opacity var(--transition-normal);
+}
+
+[data-theme="dark"] .bg-glow-orb-primary {
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 750px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(25, 166, 184, 0.55), rgba(22, 49, 59, 0) 70%);
+}
+
+[data-theme="dark"] .bg-glow-orb-secondary {
+  bottom: 0%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 152, 92, 0.25), rgba(16, 28, 34, 0) 70%);
+}
+
+[data-theme="dark"] .bg-glow-orb-accent {
+  bottom: 10%;
+  left: -5%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(25, 166, 184, 0.22), rgba(16, 28, 34, 0) 70%);
+}
+
+[data-theme="light"] .bg-glow-orb-primary {
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 750px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(0, 124, 145, 0.28), rgba(234, 248, 250, 0) 70%);
+}
+
+[data-theme="light"] .bg-glow-orb-secondary {
+  bottom: 0%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 138, 61, 0.20), rgba(255, 255, 255, 0) 70%);
+}
+
+[data-theme="light"] .bg-glow-orb-accent {
+  bottom: 10%;
+  left: -5%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(0, 124, 145, 0.14), rgba(255, 255, 255, 0) 70%);
+}
+
+/* Subtle circuit grid overlay */
+.bg-grid-mesh {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(var(--color-primary-rgb), 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(var(--color-primary-rgb), 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at 50% 30%, black 40%, transparent 85%);
+  -webkit-mask-image: radial-gradient(circle at 50% 30%, black 40%, transparent 85%);
+}
+
+/* --------------------------------------------------------------------------
+   2. Main Premium Booking Terminal (Glassmorphic Card)
+   -------------------------------------------------------------------------- */
+.booking-main-wrapper {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.booking-card-glass {
+  background: rgba(22, 49, 59, 0.88);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1.5px solid rgba(var(--color-primary-rgb), 0.30);
+  border-radius: 30px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55), 0 0 45px rgba(var(--color-primary-rgb), 0.15);
+  padding: 38px 46px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+[data-theme="light"] .booking-card-glass {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1.5px solid rgba(0, 124, 145, 0.24);
+  box-shadow: 0 24px 60px rgba(22, 49, 59, 0.12), 0 0 35px rgba(var(--color-primary-rgb), 0.10);
+}
+
+/* Decorative top glow rim on the card */
+.booking-card-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 2.5px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), var(--color-secondary), transparent);
+}
+
+/* --------------------------------------------------------------------------
+   3. Card Top Right Toggles Container
+   -------------------------------------------------------------------------- */
+.card-top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.top-toggles-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   4. Centered Brand Identity Block Inside The Card
+   -------------------------------------------------------------------------- */
+.card-brand-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.brand-anchor-center {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: transform var(--transition-fast);
+}
+
+.brand-anchor-center:hover {
+  transform: translateY(-2px);
+}
+
+.brand-logo-symbol-lg {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2.5px solid var(--color-primary);
+  background: #0B161B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 24px rgba(var(--color-primary-rgb), 0.55), 0 8px 24px rgba(0, 0, 0, 0.45);
+  transition: all var(--transition-normal);
+}
+
+.brand-anchor-center:hover .brand-logo-symbol-lg {
+  box-shadow: 0 0 34px rgba(var(--color-primary-rgb), 0.75), 0 12px 30px rgba(0, 0, 0, 0.5);
+  transform: scale(1.04);
+}
+
+.brand-logo-symbol-lg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.brand-text-block-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-title-lg {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.brand-title-lg span {
+  color: var(--color-primary);
+}
+
+.brand-subtitle-lg {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-top: 5px;
+}
+
+.brand-status-pill {
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 16px;
+  background: rgba(var(--color-primary-rgb), 0.10);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.3);
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.status-live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-success);
+  box-shadow: 0 0 10px var(--accent-success);
+  animation: livePulse 2s infinite ease-in-out;
+}
+
+/* --------------------------------------------------------------------------
+   5. Card Header Block
+   -------------------------------------------------------------------------- */
+.booking-header-block {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.booking-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  background: rgba(var(--color-secondary-rgb), 0.12);
+  border: 1px solid rgba(var(--color-secondary-rgb), 0.35);
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 12px;
+}
+
+.booking-card-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+}
+
+.booking-card-subtitle {
+  font-size: 0.96rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   6. Interactive Service Category Selector (3-Column Grid)
+   -------------------------------------------------------------------------- */
+.section-subtitle-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+
+.section-subtitle-label span.req-star {
+  color: var(--color-secondary);
+  margin-left: 4px;
+}
+
+.services-grid-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.service-tile-btn {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 16px;
+  border-radius: 16px;
+  background: var(--bg-surface-elevated);
+  border: 1.5px solid var(--border-color);
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-fast);
+  position: relative;
+  color: inherit;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+[data-theme="light"] .service-tile-btn {
+  background: #F4FBFC;
+}
+
+[dir="rtl"] .service-tile-btn {
+  text-align: right;
+}
+
+.service-tile-btn:hover {
+  border-color: var(--color-primary);
+  background: rgba(var(--color-primary-rgb), 0.10);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.service-tile-btn.selected {
+  border-color: var(--color-primary);
+  background: rgba(var(--color-primary-rgb), 0.15);
+  box-shadow: 0 0 20px rgba(var(--color-primary-rgb), 0.28);
+}
+
+.service-tile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(var(--color-primary-rgb), 0.15);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.service-tile-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.service-tile-btn.selected .service-tile-icon {
+  background: var(--color-primary);
+  color: #101C22;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 12px rgba(var(--color-primary-rgb), 0.6);
+}
+
+[data-theme="light"] .service-tile-btn.selected .service-tile-icon {
+  color: #FFFFFF;
+}
+
+.service-tile-text {
+  flex: 1;
+}
+
+.service-tile-title {
+  display: block;
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.service-tile-desc {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.service-tile-price {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  background: rgba(var(--color-secondary-rgb), 0.12);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.tile-check-indicator {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  background: var(--bg-surface);
+}
+
+[dir="rtl"] .tile-check-indicator {
+  right: auto;
+  left: 12px;
+}
+
+.service-tile-btn.selected .tile-check-indicator {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #101C22;
+}
+
+[data-theme="light"] .service-tile-btn.selected .tile-check-indicator {
+  color: #FFFFFF;
+}
+
+.tile-check-indicator svg {
+  width: 12px;
+  height: 12px;
+  stroke-width: 3;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.service-tile-btn.selected .tile-check-indicator svg {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   7. Priority / Urgency Selection Bar
+   -------------------------------------------------------------------------- */
+.urgency-selection-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.urgency-card-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 18px;
+  border-radius: 16px;
+  background: var(--bg-surface-elevated);
+  border: 1.5px solid var(--border-color);
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-fast);
+  color: inherit;
+  font-family: inherit;
+  width: 100%;
+}
+
+[data-theme="light"] .urgency-card-btn {
+  background: #F4FBFC;
+}
+
+[dir="rtl"] .urgency-card-btn {
+  text-align: right;
+}
+
+.urgency-card-btn:hover {
+  border-color: var(--color-primary);
+  background: rgba(var(--color-primary-rgb), 0.1);
+}
+
+.urgency-card-btn.selected {
+  border-color: var(--color-primary);
+  background: rgba(var(--color-primary-rgb), 0.14);
+  box-shadow: 0 0 16px rgba(var(--color-primary-rgb), 0.22);
+}
+
+.urgency-card-btn.emergency-tier.selected {
+  border-color: var(--color-secondary);
+  background: rgba(var(--color-secondary-rgb), 0.14);
+  box-shadow: 0 0 18px rgba(var(--color-secondary-rgb), 0.25);
+}
+
+.urgency-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(var(--color-primary-rgb), 0.15);
+  color: var(--color-primary);
+}
+
+.urgency-card-btn.emergency-tier .urgency-icon-wrap {
+  background: rgba(var(--color-secondary-rgb), 0.18);
+  color: var(--color-secondary);
+}
+
+.urgency-icon-wrap svg {
+  width: 20px;
+  height: 20px;
+}
+
+.urgency-title {
+  display: block;
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.urgency-desc {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   8. Form Inputs & Grids
+   -------------------------------------------------------------------------- */
+.form-section-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 24px 0;
+}
+
+.form-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.form-group-custom {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.form-label-custom {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.form-label-custom .req {
+  color: var(--color-secondary);
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon-left {
+  position: absolute;
+  left: 16px;
+  color: var(--text-muted);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast);
+}
+
+.input-icon-left svg {
+  width: 18px;
+  height: 18px;
+}
+
+[dir="rtl"] .input-icon-left {
+  left: auto;
+  right: 16px;
+}
+
+.form-control-luxury {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 18px 13px 46px;
+  border-radius: 12px;
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border-color);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.94rem;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+[data-theme="light"] .form-control-luxury {
+  background: #FFFFFF;
+}
+
+[dir="rtl"] .form-control-luxury {
+  padding: 13px 46px 13px 18px;
+}
+
+.form-control-luxury:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.22);
+}
+
+.form-control-luxury:focus + .input-icon-left,
+.input-with-icon:focus-within .input-icon-left {
+  color: var(--color-primary);
+}
+
+textarea.form-control-luxury {
+  padding: 13px 18px;
+  min-height: 95px;
+  resize: vertical;
+}
+
+/* --------------------------------------------------------------------------
+   9. Live Service Summary & Pricing Box
+   -------------------------------------------------------------------------- */
+.booking-summary-banner {
+  background: rgba(var(--color-primary-rgb), 0.08);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.25);
+  border-radius: 16px;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+}
+
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.summary-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.summary-service-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.summary-dispatch-note {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.summary-price-box {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+[dir="rtl"] .summary-price-box {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.summary-estimate-val {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--color-secondary);
+  line-height: 1.1;
+}
+
+.summary-estimate-caption {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* --------------------------------------------------------------------------
+   10. Trust Badges Strip
+   -------------------------------------------------------------------------- */
+.trust-badges-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 26px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(var(--color-primary-rgb), 0.05);
+  border: 1px dashed var(--border-color);
+}
+
+.trust-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.trust-badge-item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   11. Primary Submit Button
+   -------------------------------------------------------------------------- */
+.submit-booking-btn {
+  width: 100%;
+  padding: 18px 32px;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  color: #101C22;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 8px 30px rgba(var(--color-primary-rgb), 0.45), 0 0 15px rgba(var(--color-primary-rgb), 0.25);
+  font-family: inherit;
+}
+
+[data-theme="light"] .submit-booking-btn {
+  color: #FFFFFF;
+}
+
+.submit-booking-btn svg {
+  width: 22px;
+  height: 22px;
+  transition: transform var(--transition-fast);
+}
+
+.submit-booking-btn:hover {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 38px rgba(var(--color-primary-rgb), 0.60), 0 0 25px rgba(var(--color-primary-rgb), 0.35);
+}
+
+.submit-booking-btn:hover svg {
+  transform: scale(1.15);
+}
+
+.submit-booking-btn:active {
+  transform: scale(0.98);
+}
+
+/* --------------------------------------------------------------------------
+   12. Interactive Success Screen
+   -------------------------------------------------------------------------- */
+.booking-success-view {
+  display: none;
+  text-align: center;
+  padding: 20px 10px;
+  animation: fadeInSuccess 0.4s ease-out;
+}
+
+.booking-success-view.active {
+  display: block;
+}
+
+@keyframes fadeInSuccess {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.success-badge-symbol {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
+  background: rgba(var(--color-primary-rgb), 0.16);
+  border: 3px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  box-shadow: 0 0 35px rgba(var(--color-primary-rgb), 0.5);
+  position: relative;
+}
+
+.success-badge-symbol svg {
+  width: 44px;
+  height: 44px;
+}
+
+.success-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin: 0 0 10px 0;
+}
+
+.success-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 580px;
+  margin: 0 auto 28px auto;
+}
+
+.booking-ticket-card {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 24px 30px;
+  max-width: 560px;
+  margin: 0 auto 32px auto;
+  text-align: left;
+}
+
+[dir="rtl"] .booking-ticket-card {
+  text-align: right;
+}
+
+.ticket-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+}
+
+.ticket-ref-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.ticket-ref-number {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--color-secondary);
+  font-family: monospace;
+}
+
+.ticket-data-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ticket-data-item .t-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.ticket-data-item .t-value {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.success-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-secondary-custom {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  background: rgba(var(--color-primary-rgb), 0.12);
+  border: 1.5px solid var(--border-color);
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 0.96rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary-custom:hover {
+  border-color: var(--color-primary);
+  background: rgba(var(--color-primary-rgb), 0.20);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   13. Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .services-grid-selector {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  body.booking-page-body {
+    padding: 20px 12px;
+  }
+
+  .booking-card-glass {
+    padding: 26px 18px;
+    border-radius: 22px;
+  }
+
+  .booking-card-title {
+    font-size: 1.65rem;
+  }
+
+  .brand-title-lg {
+    font-size: 1.65rem;
+  }
+
+  .form-two-col,
+  .urgency-selection-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .booking-summary-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .summary-price-box {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  [dir="rtl"] .summary-price-box {
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  .ticket-data-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

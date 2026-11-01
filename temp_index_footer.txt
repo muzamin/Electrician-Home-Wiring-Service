@@ -1,0 +1,139 @@
+<footer class="site-footer" id="mainFooter">
+    <div class="header-container footer-container">
+      <div class="footer-columns-grid">
+
+        <!-- Column 1: Brand Name, Paratext, Social Icons -->
+        <div class="footer-col footer-col-brand">
+          <div class="brand-identity footer-brand">
+            <div class="brand-logo-symbol">
+              <img src="logo.png" alt="VoltGuard Electrician &amp; Home Wiring Logo" class="brand-logo-img" width="56"
+                height="56">
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-title">Volt<span>Guard</span></span>
+              <span class="brand-subtitle">Electrician &amp; Home Wiring</span>
+            </div>
+          </div>
+          <p class="footer-description">
+            Dedicated to delivering dependable electrical solutions, certified residential wiring, switchboard repairs,
+            and safety inspections with master workmanship.
+          </p>
+          <div class="social-links-row" aria-label="Follow us on social channels">
+            <a href="#facebook" class="social-circle-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="#twitter" class="social-circle-btn" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+              </svg>
+            </a>
+            <a href="#instagram" class="social-circle-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#linkedin" class="social-circle-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Services -->
+        <div class="footer-col">
+          <h2 class="footer-heading">Services</h2>
+          <ul class="footer-nav-list">
+            <li><a href="service detail.html?service=wiring" class="footer-nav-link">Whole-Home Rewiring</a></li>
+            <li><a href="service detail.html?service=fan-light" class="footer-nav-link">Fan &amp; Light Fitting</a></li>
+            <li><a href="service detail.html?service=switchboard" class="footer-nav-link">Switchboard Repair</a></li>
+            <li><a href="service detail.html?service=emergency-diagnostics" class="footer-nav-link">Emergency
+                Diagnostics</a></li>
+            <li><a href="service detail.html?service=ev-charger" class="footer-nav-link">EV Charger Stations</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Additional Links (Coming Soon, 404, Dashboard, Login, Pricing) -->
+        <div class="footer-col">
+          <h2 class="footer-heading">Additional Links</h2>
+          <ul class="footer-nav-list">
+            <li><a href="#coming-soon" class="footer-nav-link open-coming-soon-btn">Coming Soon</a></li>
+            <li><a href="#404" class="footer-nav-link open-404-btn">404</a></li>
+            <li><a href="#dashboard" class="footer-nav-link open-dashboard-btn">Dashboard</a></li>
+            <li><a href="#login" class="footer-nav-link open-login-btn">Login</a></li>
+            <li><a href="#pricing" class="footer-nav-link">Pricing</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact and Support (Mail Contact, Address, Timings) -->
+        <div class="footer-col footer-col-contact">
+          <h2 class="footer-heading">Contact and Support</h2>
+          <ul class="contact-details-list">
+            <li class="contact-item">
+              <span class="contact-icon-wrapper" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </span>
+              <div class="contact-text">
+                <a href="mailto:support@voltguard.example" class="contact-value">support@voltguard.example</a>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <span class="contact-icon-wrapper" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <div class="contact-text">
+                <span class="contact-value">742 Evergreen Terrace, Metro Circuit District</span>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <span class="contact-icon-wrapper" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </span>
+              <div class="contact-text">
+                <span class="contact-value">Mon – Sat: 7:00 AM – 8:00 PM (24/7 Emergency)</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div class="header-container footer-bottom-inner">
+        <p class="copyright-text">
+          &copy; <span id="currentYear"></span> VoltGuard Electrician &amp; Home Wiring Service. All Rights Reserved.
+        </p>
+        <div class="legal-links">
+          <a href="#privacy" class="legal-link">Privacy Policy</a>
+          <a href="#terms" class="legal-link">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>

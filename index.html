@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoltGuard | Electrician &amp; Home Wiring Service | Certified Electrical Solutions</title>
+  <meta name="description"
+    content="VoltGuard provides certified residential electrical wiring, fan & light fitting, switchboard repair, 24/7 emergency diagnostics, and smart home electrical engineering.">
+
+  <!-- Google Fonts: Inter -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="standard_header.css">
+  <link rel="stylesheet" href="standard_cta.css">
+  <link rel="stylesheet" href="standard_footer.css">
+</head>
+
+<body>
+
+  <!-- ========================================================================
+       PREMIUM SITE HEADER
+       - Left: Brand Logo & Identity
+       - Middle: Nav Links (Home, About us, Services, Pricing, Contact Us)
+       - Right: Theme Toggle (40x40), RTL Button (40x40), Book a Service (Primary Button)
+       ======================================================================== -->
+  <header class="site-header" id="mainHeader">
+    <div class="header-container header-layout">
+
+      <!-- Left: Brand Logo & Identity -->
+      <a href="index.html" class="brand-identity" aria-label="VoltGuard Electrician & Home Wiring Service">
+        <div class="brand-logo-symbol">
+          <img src="logo.png" alt="VoltGuard Electrician &amp; Home Wiring Logo" class="brand-logo-img" width="52"
+            height="52">
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">Volt<span>Guard</span></span>
+          <span class="brand-subtitle">Electrician &amp; Home Wiring</span>
+        </div>
+      </a>
+
+      <!-- Middle: Desktop Main Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+
+          <!-- 1. Home (Simple & Classy Dropdown Button) -->
+          <li class="nav-item has-dropdown" id="homeDropdownParent">
+            <button type="button" class="nav-link home-dropdown-trigger active-page" id="homeDropdownButton"
+              aria-expanded="false" aria-haspopup="true" aria-controls="homeDropdownMenu">
+              <span>Home</span>
+              <svg class="dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+
+            <!-- Simple Classy Home Dropdown Menu -->
+            <div class="dropdown-menu classy-home-dropdown" id="homeDropdownMenu" role="menu"
+              aria-labelledby="homeDropdownButton">
+              <div class="dropdown-pointer" aria-hidden="true"></div>
+              <ul class="dropdown-list">
+                <li role="none">
+                  <a href="index.html" class="dropdown-item active-variant" role="menuitem" data-homepage="1">
+                    <div class="dropdown-item-symbol">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                      </svg>
+                    </div>
+                    <div class="dropdown-item-info">
+                      <span class="dropdown-item-name">Home 1</span>
+                      <span class="dropdown-item-caption">Residential Wiring</span>
+                    </div>
+                    <span class="dropdown-active-indicator" title="Active Page"></span>
+                  </a>
+                </li>
+                <li role="none">
+                  <a href="Home 2.html" class="dropdown-item" id="switchHome2Option" role="menuitem" data-homepage="2">
+                    <div class="dropdown-item-symbol">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                      </svg>
+                    </div>
+                    <div class="dropdown-item-info">
+                      <span class="dropdown-item-name">Home 2</span>
+                      <span class="dropdown-item-caption">Commercial &amp; Auto</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- 2. About us -->
+          <li class="nav-item">
+            <a href="About.html" class="nav-link">About us</a>
+          </li>
+
+          <!-- 3. Services -->
+          <li class="nav-item">
+            <a href="service.html" class="nav-link">Services</a>
+          </li>
+
+          <!-- 4. Pricing -->
+          <li class="nav-item">
+            <a href="pricing.html" class="nav-link">Pricing</a>
+          </li>
+
+          <!-- 5. Safety -->
+          <li class="nav-item">
+            <a href="safety.html" class="nav-link">Safety</a>
+          </li>
+
+          <!-- 6. Contact Us -->
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- Right: Header Controls & Primary CTA -->
+      <div class="header-actions">
+
+        <!-- Theme Toggle (40x40 icon button) -->
+        <button type="button" class="header-icon-btn theme-btn" id="themeToggleBtn" aria-label="Switch Theme"
+          title="Toggle Theme (Dark / Light)">
+          <!-- Sun Icon (Active in Dark mode) -->
+          <svg class="theme-icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (Active in Light mode) -->
+          <svg class="theme-icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span class="sr-only">Toggle Theme</span>
+        </button>
+
+        <!-- RTL Toggle Button (40x40 size with secondary colour) -->
+        <button type="button" class="header-icon-btn rtl-btn" id="rtlToggleBtn"
+          aria-label="Toggle Right to Left direction" title="Toggle RTL / LTR layout">
+          <span class="rtl-label">RTL</span>
+          <span class="sr-only">Toggle RTL</span>
+        </button>
+
+        <!-- Book a Service Button (Primary Button) -->
+        <a href="book-a-service.html" class="btn btn-primary header-cta-btn" id="bookServiceHeaderBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Book a Service</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button (Hamburger) -->
+        <button type="button" class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Open navigation menu"
+          aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop" aria-hidden="true"></div>
+    <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+      <div class="mobile-drawer-header">
+        <div class="brand-identity">
+          <div class="brand-logo-symbol">
+            <img src="logo.png" alt="VoltGuard Logo" class="brand-logo-img" width="46" height="46">
+          </div>
+          <div class="brand-text-block">
+            <span class="brand-title">Volt<span>Guard</span></span>
+            <span class="brand-subtitle">Electrician &amp; Home Wiring</span>
+          </div>
+        </div>
+        <button type="button" class="mobile-close-btn" id="mobileDrawerClose" aria-label="Close navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-drawer-body">
+        <ul class="mobile-nav-list">
+
+          <!-- Home Submenu Accordion -->
+          <li class="mobile-nav-item mobile-accordion" id="mobileHomeAccordion">
+            <button type="button" class="mobile-nav-link accordion-header" id="mobileHomeAccordionBtn"
+              aria-expanded="false" aria-controls="mobileHomeAccordionContent">
+              <span>Home</span>
+              <svg class="mobile-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="mobile-accordion-content" id="mobileHomeAccordionContent">
+              <a href="index.html" class="mobile-sublink active-sublink" data-homepage="1">
+                <span>Home 1 (Residential Wiring)</span>
+              </a>
+              <a href="Home 2.html" class="mobile-sublink" data-homepage="2">
+                <span>Home 2 (Commercial &amp; Auto)</span>
+              </a>
+            </div>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="About.html" class="mobile-nav-link">About us</a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="service.html" class="mobile-nav-link">Services</a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="safety.html" class="mobile-nav-link">Safety</a>
+          </li>
+
+          <li class="mobile-nav-item">
+            <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <!-- Mobile Controls -->
+        <div class="mobile-controls-row">
+          <button type="button" class="mobile-control-item" id="mobileThemeToggleBtn">
+            <span class="control-text" id="mobileThemeLabel">Light Mode</span>
+          </button>
+          <button type="button" class="mobile-control-item" id="mobileRtlToggleBtn">
+            <span class="control-text" id="mobileRtlLabel">Switch to RTL</span>
+          </button>
+        </div>
+
+        <!-- Mobile CTA -->
+        <div class="mobile-ctas-container">
+          <a href="book-a-service.html" class="btn btn-primary btn-block">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right: 6px;">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>Book a Service</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN CONTENT: 9 PREMIUM SECTIONS
+       ======================================================================== -->
+  <main id="mainContent">
+
+    <!-- ========================================================================
+         SECTION 1: HERO BANNER (Left Paratext, Right Image Alignment 2 - Fits Screen)
+         ======================================================================== -->
+    <section class="hero-section" id="home">
+      <div class="header-container hero-container">
+        <div class="hero-grid">
+
+          <!-- Left Paratext Content -->
+          <div class="hero-content">
+            <div class="hero-badge-pill">
+              <span class="spark-icon">⚡</span>
+              <span>PROFESSIONAL ELECTRICAL SERVICES</span>
+            </div>
+
+            <h1 class="hero-heading">
+              Reliable Electrical
+              <span class="hero-highlight gradient-text">Solutions for Your Home</span>
+            </h1>
+
+            <p class="hero-description">
+              From installations to repairs, we keep your home safe, powered and running smoothly. Certified master
+              electricians delivering clean, code-compliant workmanship and rapid emergency dispatch.
+            </p>
+
+            <div class="hero-actions-row">
+              <button type="button" class="btn btn-primary open-quote-modal-btn">
+                <span>Get a Quote &rarr;</span>
+              </button>
+
+              <a href="#services" class="btn btn-secondary">
+                <span>Our Services</span>
+              </a>
+            </div>
+
+            <!-- 4 Core Sub-Features Row (Faithful to Primary Design Mockup) -->
+            <div class="hero-subfeatures-grid">
+              <div class="hero-subfeature-card">
+                <div class="subfeature-icon-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                </div>
+                <div class="subfeature-label">Electrical<br>Installations</div>
+              </div>
+
+              <div class="hero-subfeature-card">
+                <div class="subfeature-icon-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
+                </div>
+                <div class="subfeature-label">Repairs &amp;<br>Maintenance</div>
+              </div>
+
+              <div class="hero-subfeature-card">
+                <div class="subfeature-icon-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                </div>
+                <div class="subfeature-label">Home Wiring<br>&amp; Rewiring</div>
+              </div>
+
+              <div class="hero-subfeature-card">
+                <div class="subfeature-icon-wrap">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M9 18h6"></path>
+                    <path d="M10 22h4"></path>
+                    <path
+                      d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="subfeature-label">Lighting<br>Solutions</div>
+              </div>
+            </div>
+
+            <!-- Quick Key Highlights Bar -->
+            <div class="hero-stats-bar">
+              <div class="hero-stat-box">
+                <span class="hero-stat-num">15+</span>
+                <span class="hero-stat-text">Years Master Certified</span>
+              </div>
+              <div class="hero-stat-divider"></div>
+              <div class="hero-stat-box">
+                <span class="hero-stat-num">12.5k</span>
+                <span class="hero-stat-text">Installations Completed</span>
+              </div>
+              <div class="hero-stat-divider"></div>
+              <div class="hero-stat-box">
+                <span class="hero-stat-num">25m</span>
+                <span class="hero-stat-text">Emergency Rapid Dispatch</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Image Alignment 2 (Dual Image Composition with Neon Arcs) -->
+          <div class="hero-visual-wrapper">
+            <div class="hero-dual-visual">
+
+              <!-- Ambient Curved Neon Swooshes (SVG Arc Backdrop) -->
+              <div class="hero-arc-layer" aria-hidden="true">
+                <svg class="hero-arc-svg" viewBox="0 0 540 500" fill="none">
+                  <path d="M60 480C140 380 200 240 180 80C170 30 220 10 260 40C320 90 400 120 490 100"
+                    stroke="url(#arcGradient)" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+                  <path d="M10 320C120 310 220 220 260 120" stroke="var(--color-primary)" stroke-width="1.8"
+                    stroke-dasharray="6 6" opacity="0.6" />
+                  <path d="M420 480C460 380 500 280 520 180" stroke="var(--color-secondary)" stroke-width="2.5"
+                    stroke-linecap="round" opacity="0.5" />
+                  <defs>
+                    <linearGradient id="arcGradient" x1="0" y1="0" x2="540" y2="500" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="var(--color-primary)" stop-opacity="0.9" />
+                      <stop offset="60%" stop-color="var(--color-primary)" stop-opacity="0.6" />
+                      <stop offset="100%" stop-color="var(--color-secondary)" stop-opacity="0.2" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+
+              <!-- Primary Hero Image -->
+              <div class="hero-image-primary">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1000&q=85"
+                  alt="Certified Master Electrician testing circuit breaker" class="dual-img-element" loading="eager"
+                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=85';">
+                <div class="hero-image-gradient"></div>
+              </div>
+
+              <!-- Secondary Overlapping Image (Image Alignment 2) -->
+              <div class="hero-image-secondary">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80"
+                  alt="Modern electrical distribution board and testing instrumentation" class="dual-img-element"
+                  loading="lazy">
+                <div class="secondary-chip">
+                  <span class="chip-status-dot"></span>
+                  <span>Active Circuit Tested</span>
+                </div>
+              </div>
+
+              <!-- Floating Trust Badge 1 (Top Right) -->
+              <div class="hero-floating-badge badge-top-right">
+                <div class="floating-badge-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <polyline points="9 12 11 14 15 10" />
+                  </svg>
+                </div>
+                <div class="floating-badge-text">
+                  <span class="badge-label">Certification</span>
+                  <span class="badge-value">100% Safety Certified</span>
+                </div>
+              </div>
+
+              <!-- Floating Trust Badge 2 (Bottom Left) -->
+              <div class="hero-floating-badge badge-bottom-left">
+                <div class="floating-badge-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                </div>
+                <div class="floating-badge-text">
+                  <span class="star-rating">★★★★★</span>
+                  <span class="badge-value">4.9/5 (1,450+ Reviews)</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 2: 3 SERVICES CARDS SECTION (Covering Wiring, Fan/Light, Switchboard)
+         ======================================================================== -->
+    <section class="services-section section-container" id="services">
+      <div class="header-container">
+        <div class="section-header-center">
+          <div class="section-tag">Core Capabilities</div>
+          <h2 class="section-title">Specialized Electrical Services</h2>
+          <p class="section-subtitle">
+            Safety-focused residential electrical solutions covering precision wiring, fan and light fitting, and
+            switchboard repair.
+          </p>
+        </div>
+
+        <div class="services-grid services-3-grid">
+
+          <!-- Service Card 1: Whole-Home Wiring & Rewiring -->
+          <div class="service-card">
+            <div class="service-card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80"
+                alt="Whole-home copper wiring installation and circuit rewiring" class="service-card-img" loading="lazy"
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80';">
+              <div class="service-card-img-overlay"></div>
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+              </div>
+              <span class="service-badge-pill">Wiring &amp; Safety</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-title">Whole-Home Wiring &amp; Rewiring</h3>
+              <p class="service-desc">
+                Comprehensive copper rewiring, hazardous aluminum wire replacement, new branch circuits, and grounding
+                protection engineered to eliminate fire risks.
+              </p>
+              <ul class="service-features-bullets">
+                <li>100% Solid copper conductors</li>
+                <li>Minimal wall incision technique</li>
+                <li>Complete municipal code compliance</li>
+              </ul>
+              <div class="service-card-footer">
+                <span class="service-price-tag">From $280</span>
+                <a href="#contact" class="service-link open-quote-modal-btn">
+                  <span>Book Service</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 2: Fan and Light Fitting -->
+          <div class="service-card">
+            <div class="service-card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80"
+                alt="Modern architectural ceiling lighting and balanced fan fixtures" class="service-card-img"
+                loading="lazy"
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80';">
+              <div class="service-card-img-overlay"></div>
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M12 2v20"></path>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+              <span class="service-badge-pill">Fixtures &amp; Ambiance</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-title">Fan &amp; Architectural Light Fitting</h3>
+              <p class="service-desc">
+                Heavy-duty ceiling fan installation, smart LED recessed downlights, chandelier reinforcement bracing,
+                and
+                dimmer controls.
+              </p>
+              <ul class="service-features-bullets">
+                <li>Reinforced ceiling junction boxes</li>
+                <li>Flicker-free smart dimmer integration</li>
+                <li>Energy-efficient LED conversions</li>
+              </ul>
+              <div class="service-card-footer">
+                <span class="service-price-tag">From $140</span>
+                <a href="#contact" class="service-link open-quote-modal-btn">
+                  <span>Book Service</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Card 3: Switchboard Repair & Overhaul -->
+          <div class="service-card">
+            <div class="service-card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+                alt="Switchboard breaker overhaul and diagnostic repairs" class="service-card-img" loading="lazy"
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80';">
+              <div class="service-card-img-overlay"></div>
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <path d="M12 8v8" />
+                  <path d="M8 12h8" />
+                  <circle cx="12" cy="12" r="2" />
+                </svg>
+              </div>
+              <span class="service-badge-pill">Circuit Protection</span>
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-title">Switchboard Repair &amp; Upgrades</h3>
+              <p class="service-desc">
+                Upgrading dangerous fuse boxes to modern 200A breaker panels equipped with dual Arc-Fault (AFCI) and
+                Ground-Fault (GFCI) protection.
+              </p>
+              <ul class="service-features-bullets">
+                <li>Instant overload surge suppression</li>
+                <li>Whole-home surge protection units</li>
+                <li>Official safety inspection certificate</li>
+              </ul>
+              <div class="service-card-footer">
+                <span class="service-price-tag">From $450</span>
+                <a href="#contact" class="service-link open-quote-modal-btn">
+                  <span>Book Service</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 3: TIMELINE SECTION (Step-by-Step Workflow & Safety Protocol)
+         ======================================================================== -->
+    <div id="safety"></div>
+    <section class="timeline-section section-container" id="timeline">
+      <div class="header-container">
+        <div class="section-header-center">
+          <div class="section-tag">Quality Process</div>
+          <h2 class="section-title">4-Step Precision Workflow</h2>
+          <p class="section-subtitle">
+            Our systematic engineering protocol guarantees code compliance, uninterrupted safety, and zero hidden costs.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-track-line" aria-hidden="true"></div>
+
+          <div class="timeline-steps-grid">
+
+            <!-- Step 1 -->
+            <div class="timeline-step-card">
+              <div class="step-badge-wrap">
+                <span class="step-number">01</span>
+              </div>
+              <h3 class="step-title">Safety Load Audit</h3>
+              <p class="step-desc">
+                Comprehensive on-site load calculation, voltage fluctuation testing, and infrared scan to identify
+                latent fire risks.
+              </p>
+              <div class="step-tag">Step 1 • Initial Inspection</div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="timeline-step-card">
+              <div class="step-badge-wrap">
+                <span class="step-number">02</span>
+              </div>
+              <h3 class="step-title">Code Blueprinting</h3>
+              <p class="step-desc">
+                Drafting circuit pathways, amp distribution tables, and securing municipal permits before touching any
+                wiring.
+              </p>
+              <div class="step-tag">Step 2 • Permitted Planning</div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="timeline-step-card">
+              <div class="step-badge-wrap">
+                <span class="step-number">03</span>
+              </div>
+              <h3 class="step-title">Certified Installation</h3>
+              <p class="step-desc">
+                Licensed electricians route solid oxygen-free copper conduits, mount AFCI breakers, and balance
+                household loads cleanly.
+              </p>
+              <div class="step-tag">Step 3 • Execution</div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="timeline-step-card">
+              <div class="step-badge-wrap">
+                <span class="step-number">04</span>
+              </div>
+              <h3 class="step-title">Thermal Diagnostics</h3>
+              <p class="step-desc">
+                Full thermal imaging verification under 100% peak operating load, followed by official compliance
+                certificate sign-off.
+              </p>
+              <div class="step-tag">Step 4 • Certification</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 4: SPECIALIZED SHOWCASE (Electrician & Home Wiring Engineering)
+         ======================================================================== -->
+    <section class="specialized-section section-container" id="about">
+      <div class="header-container">
+        <div class="specialized-layout-grid">
+
+          <!-- Left Content -->
+          <div class="specialized-content-col">
+            <div class="section-tag">Engineering Standard</div>
+            <h2 class="section-title text-left">Master Electrical Engineering &amp; Fire Prevention</h2>
+            <p class="section-paragraph">
+              Electrical infrastructure is the circulatory system of modern living. We build residential systems with
+              the exact safety margins, thermal tolerances, and conductor ratings required for heavy induction
+              appliances and EV charging.
+            </p>
+
+            <div class="features-pillar-list">
+              <!-- Pillar 1 -->
+              <div class="pillar-item">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 14 14" />
+                  </svg>
+                </div>
+                <div class="pillar-content">
+                  <h4 class="pillar-title">100% Oxygen-Free Solid Copper Conductors</h4>
+                  <p class="pillar-desc">We never use cheap copper-clad aluminum (CCA). All wiring uses certified 99.9%
+                    pure copper for zero heat buildup.</p>
+                </div>
+              </div>
+
+              <!-- Pillar 2 -->
+              <div class="pillar-item">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                  </svg>
+                </div>
+                <div class="pillar-content">
+                  <h4 class="pillar-title">Fluke&reg; Infrared Thermal Scanning</h4>
+                  <p class="pillar-desc">Every terminal and junction is scanned under peak load with calibrated thermal
+                    cameras to identify micro-arcing before it starts.</p>
+                </div>
+              </div>
+
+              <!-- Pillar 3 -->
+              <div class="pillar-item">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                    <line x1="8" y1="21" x2="16" y2="21" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
+                  </svg>
+                </div>
+                <div class="pillar-content">
+                  <h4 class="pillar-title">Arc-Fault Circuit Interrupter (AFCI) Standard</h4>
+                  <p class="pillar-desc">Advanced electronic sensors detect hazardous electrical sparks within 2
+                    milliseconds to immediately disconnect power.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="specialized-action-row">
+              <a href="#pricing" class="btn btn-primary">
+                <span>See Transparent Pricing</span>
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <span>Book Safety Inspection</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Live Circuit Diagnostic Telemetry Glass Card (Also serves as in-page #dashboard) -->
+          <div class="specialized-visual-card" id="dashboard">
+            <div class="visual-card-glass">
+              <div class="visual-card-header">
+                <div class="visual-status-pill">
+                  <span class="live-pulse"></span>
+                  <span>Safety Compliance Grade: A+ (100%)</span>
+                </div>
+                <span class="visual-verified-badge">Licensed &amp; Insured to $5,000,000</span>
+              </div>
+
+              <div class="visual-diagnostic-meter">
+                <div class="meter-label-row">
+                  <span>Switchboard Load Capacity</span>
+                  <span class="meter-val">200 Amp (Optimal)</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 82%;"></div>
+                </div>
+
+                <div class="meter-label-row">
+                  <span>Surge Protection Response</span>
+                  <span class="meter-val">&lt; 1 Nanosecond (Safe)</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 95%;"></div>
+                </div>
+
+                <div class="meter-label-row">
+                  <span>Grounding Resistance</span>
+                  <span class="meter-val">3.2 Ohms (Passes Code)</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+
+              <!-- Master Electrician Certification Seals -->
+              <div class="certifications-row">
+                <div class="cert-seal">
+                  <span class="cert-title">NECA</span>
+                  <span class="cert-sub">Member</span>
+                </div>
+                <div class="cert-seal">
+                  <span class="cert-title">IEEE</span>
+                  <span class="cert-sub">Standards</span>
+                </div>
+                <div class="cert-seal">
+                  <span class="cert-title">OSHA</span>
+                  <span class="cert-sub">Safety 30</span>
+                </div>
+                <div class="cert-seal">
+                  <span class="cert-title">UL</span>
+                  <span class="cert-sub">Certified</span>
+                </div>
+              </div>
+
+              <!-- Direct Portal Link -->
+              <div class="meter-portal-action">
+                <button type="button" class="btn btn-secondary btn-block open-dashboard-btn">
+                  <span>Open Full Customer Dashboard</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 5: CERTIFIED MASTER ELECTRICIANS (Featuring Certified Electricians)
+         ======================================================================== -->
+    <section class="team-section section-container" id="electricians">
+      <div class="header-container">
+        <div class="section-header-center">
+          <div class="section-tag">Qualified Personnel</div>
+          <h2 class="section-title">Certified Master Electricians</h2>
+          <p class="section-subtitle">
+            Every technician dispatched to your home holds active state licensing, undergoes continuous IEEE training,
+            and is fully insured.
+          </p>
+        </div>
+
+        <div class="team-grid">
+
+          <!-- Electrician 1 -->
+          <div class="team-card">
+            <div class="team-image-box">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80"
+                alt="David Vance - Senior Master Electrician" class="team-img" loading="lazy"
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80';">
+              <span class="team-license-pill">Lic. #ME-8842</span>
+            </div>
+            <div class="team-card-info">
+              <h3 class="team-name">David Vance</h3>
+              <span class="team-role">Senior Master Electrician</span>
+              <p class="team-bio">18+ years leading residential switchboard upgrades, high-amp wiring, and municipal
+                safety code inspections.</p>
+              <div class="team-skills-chips">
+                <span>200A Panels</span>
+                <span>Thermal Audits</span>
+                <span>Code Lead</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Electrician 2 -->
+          <div class="team-card">
+            <div class="team-image-box">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80"
+                alt="Elena Rostova - High-Voltage &amp; Diagnostics Engineer" class="team-img" loading="lazy"
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80';">
+              <span class="team-license-pill">Lic. #ME-9104</span>
+            </div>
+            <div class="team-card-info">
+              <h3 class="team-name">Elena Rostova</h3>
+              <span class="team-role">High-Voltage &amp; Diagnostics Engineer</span>
+              <p class="team-bio">14+ years specialized in emergency fault isolation, surge protection systems, and
+                subpanel load balancing.</p>
+              <div class="team-skills-chips">
+                <span>IEEE Member</span>
+                <span>AFCI Expert</span>
+                <span>Diagnostics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Electrician 3 -->
+          <div class="team-card">
+            <div class="team-image-box">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80"
+                alt="Marcus Chen - Residential Wiring &amp; EV Specialist" class="team-img" loading="lazy"
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80';">
+              <span class="team-license-pill">Lic. #ME-7721</span>
+            </div>
+            <div class="team-card-info">
+              <h3 class="team-name">Marcus Chen</h3>
+              <span class="team-role">Residential Wiring &amp; EV Specialist</span>
+              <p class="team-bio">10+ years delivering clean whole-home rewiring, ceiling fan bracing, and fast Level 2
+                EV charging hubs.</p>
+              <div class="team-skills-chips">
+                <span>OSHA 30</span>
+                <span>EV Charging</span>
+                <span>Concealed Run</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Trust Guarantee Strip -->
+        <div class="team-trust-strip">
+          <div class="trust-badge-item">
+            <span class="trust-icon">✓</span>
+            <span>100% Background-Checked Technicians</span>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-icon">✓</span>
+            <span>Drug-Tested &amp; Uniformed Staff</span>
+          </div>
+          <div class="trust-badge-item">
+            <span class="trust-icon">✓</span>
+            <span>$5,000,000 Liability Insurance</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 6: TRANSPARENT PRICING GUIDE (Strictly Following Guideline 9)
+         ======================================================================== -->
+    <section class="pricing-section section-container" id="pricing">
+      <div class="header-container">
+        <div class="section-header-center">
+          <div class="section-tag">Flat-Rate Pricing</div>
+          <h2 class="section-title">Transparent Service Packages</h2>
+          <p class="section-subtitle">
+            Zero surprise fees, upfront quote guarantee, and clean per-project rates backed by our 100% satisfaction
+            promise.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <!-- Pricing Card 1: Diagnostic & Minor Repair (Secondary Button) -->
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <span class="pricing-tier-name">Diagnostic &amp; Repair</span>
+              <div class="pricing-price-wrap">
+                <span class="pricing-currency">$</span>
+                <span class="pricing-amount">120</span>
+                <span class="pricing-period">/ flat call</span>
+              </div>
+              <p class="pricing-tier-desc">Ideal for tripped breakers, dead outlets, flickering fixtures, and
+                single-room troubleshooting.</p>
+            </div>
+
+            <ul class="pricing-features-list">
+              <li>Comprehensive 45-point circuit scan</li>
+              <li>Infrared thermal spot check</li>
+              <li>Includes up to 1 hr labor on diagnostic</li>
+              <li>Upfront fixed repair quote provided</li>
+              <li>90-Day workmanship warranty</li>
+            </ul>
+
+            <div class="pricing-card-footer">
+              <button type="button" class="btn btn-secondary btn-block open-quote-modal-btn">
+                <span>Select Plan</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Pricing Card 2: Switchboard Overhaul (Popular - Primary Button as per Guideline 9) -->
+          <div class="pricing-card pricing-card-popular">
+            <div class="popular-ribbon-badge">MOST POPULAR</div>
+            <div class="pricing-card-header">
+              <span class="pricing-tier-name">Switchboard &amp; Breaker Overhaul</span>
+              <div class="pricing-price-wrap">
+                <span class="pricing-currency">$</span>
+                <span class="pricing-amount">680</span>
+                <span class="pricing-period">/ standard install</span>
+              </div>
+              <p class="pricing-tier-desc">Complete modernization from obsolete fuse boxes to 200A dual AFCI/GFCI
+                protection.</p>
+            </div>
+
+            <ul class="pricing-features-list">
+              <li>Modern 200 Amp service panel</li>
+              <li>AFCI &amp; GFCI arc-fault fire prevention</li>
+              <li>Whole-home surge suppression unit</li>
+              <li>Subpanel grounding audit</li>
+              <li>Municipal inspection permit handling</li>
+              <li>5-Year comprehensive warranty</li>
+            </ul>
+
+            <div class="pricing-card-footer">
+              <button type="button" class="btn btn-primary btn-block open-quote-modal-btn">
+                <span>Select Plan</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Pricing Card 3: Whole-Home Rewiring (Secondary Button) -->
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <span class="pricing-tier-name">Complete Home Rewire</span>
+              <div class="pricing-price-wrap">
+                <span class="pricing-currency">$</span>
+                <span class="pricing-amount">2,400</span>
+                <span class="pricing-period">/ starting base</span>
+              </div>
+              <p class="pricing-tier-desc">Total replacement of ungrounded or aluminum wiring with solid oxygen-free
+                copper conductors.</p>
+            </div>
+
+            <ul class="pricing-features-list">
+              <li>100% Solid copper NM-B cabling</li>
+              <li>Minimal drywall incision method</li>
+              <li>New dedicated circuits for kitchen &amp; HVAC</li>
+              <li>Whole-home GFCI wet-zone protection</li>
+              <li>Official city certificate of compliance</li>
+              <li>10-Year structural electrical warranty</li>
+            </ul>
+
+            <div class="pricing-card-footer">
+              <button type="button" class="btn btn-secondary btn-block open-quote-modal-btn">
+                <span>Select Plan</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 7: DIRECT CONTACT & SERVICE BOOKING (With Booking Form)
+         ======================================================================== -->
+    <section class="contact-quick-section section-container" id="contact">
+      <div class="header-container">
+        <div class="section-header-center">
+          <div class="section-tag">Direct Booking</div>
+          <h2 class="section-title">Schedule an Electrician Service</h2>
+          <p class="section-subtitle">
+            Fill out the rapid dispatch request below or call our 24/7 hotline. A certified master electrician will
+            confirm your appointment within 15 minutes.
+          </p>
+        </div>
+
+        <div class="contact-box-inner">
+
+          <!-- Left Info Cards -->
+          <div class="contact-info-cards-col">
+            <div class="contact-quick-card">
+              <div class="quick-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </div>
+              <div class="quick-card-text">
+                <span class="quick-label">Emergency Dispatch</span>
+                <a href="tel:+18005550199" class="quick-val">(800) 555-0199 (24/7)</a>
+              </div>
+            </div>
+
+            <div class="contact-quick-card">
+              <div class="quick-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="quick-card-text">
+                <span class="quick-label">Support Email</span>
+                <a href="mailto:support@voltguard.example" class="quick-val">support@voltguard.example</a>
+              </div>
+            </div>
+
+            <div class="contact-quick-card">
+              <div class="quick-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="quick-card-text">
+                <span class="quick-label">Service Headquarters</span>
+                <span class="quick-val">742 Evergreen Terrace, Metro Circuit District</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Booking Form -->
+          <div class="contact-form-col">
+            <form id="quickContactForm" class="quick-contact-form">
+              <div class="form-group">
+                <label for="quickName" class="form-label">Full Name</label>
+                <input type="text" id="quickName" class="quick-input" placeholder="e.g. Michael Scott" required>
+              </div>
+
+              <div class="form-group">
+                <label for="quickPhone" class="form-label">Phone Number</label>
+                <input type="tel" id="quickPhone" class="quick-input" placeholder="(555) 234-5678" required>
+              </div>
+
+              <div class="form-group">
+                <label for="quickService" class="form-label">Service Type</label>
+                <select id="quickService" class="quick-input quick-select" required>
+                  <option value="Whole-Home Rewiring">Whole-Home Wiring &amp; Rewiring</option>
+                  <option value="Fan and Light Fitting">Fan &amp; Architectural Light Fitting</option>
+                  <option value="Switchboard Repair">Switchboard &amp; Breaker Repair</option>
+                  <option value="Emergency Diagnostic">24/7 Emergency Fault Inspection</option>
+                  <option value="EV Charger Installation">Level 2 EV Charging Station</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="quickZip" class="form-label">Zip Code / Address</label>
+                <input type="text" id="quickZip" class="quick-input" placeholder="e.g. 90210" required>
+              </div>
+
+              <div class="form-group form-group-full">
+                <label for="quickNotes" class="form-label">Issue Details / Preferred Schedule</label>
+                <textarea id="quickNotes" class="quick-input quick-textarea" rows="3"
+                  placeholder="Describe the electrical issue or project scope..."></textarea>
+              </div>
+
+              <div class="form-group-full">
+                <button type="submit" class="btn btn-primary btn-block">
+                  <span>Book Certified Electrician</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 8: STANDARDIZED PREMIUM CTA CARD (Residential & Emergency Dispatch)
+         ======================================================================== -->
+    <section class="standard-cta-section" id="cta" aria-label="Residential Electrical Dispatch">
+      <div class="standard-cta-container">
+        <div class="standard-cta-card">
+          <div class="standard-cta-grid">
+
+            <div class="standard-cta-content">
+              <div class="standard-cta-badge">
+                <span class="standard-cta-badge-dot"></span>
+                <span>24/7 RAPID RESIDENTIAL DISPATCH</span>
+              </div>
+              <h2 class="standard-cta-heading">
+                Need Immediate Electrical Assistance or a <span class="gradient-text">Whole-Home Rewiring Quote?</span>
+              </h2>
+              <p class="standard-cta-desc">
+                Our licensed master electricians are on standby with fully-stocked mobile diagnostic vans. Receive your
+                transparent, fixed-price proposal in minutes with zero obligations and sub-20 minute priority arrival.
+              </p>
+              <div class="standard-cta-guarantees">
+                <span class="standard-cta-guarantee-pill">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Sub-20 Min Arrival
+                </span>
+                <span class="standard-cta-guarantee-pill">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  100% Solid Copper Core
+                </span>
+                <span class="standard-cta-guarantee-pill">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Master Electrician Signed
+                </span>
+              </div>
+            </div>
+
+            <div class="standard-cta-actions">
+              <div class="standard-cta-buttons">
+                <button type="button" class="standard-cta-btn-primary open-quote-modal-btn">
+                  <span>Schedule Service Now</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </button>
+                <a href="tel:+18005550199" class="standard-cta-btn-secondary">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                  <span>Hotline: (800) 555-0199</span>
+                </a>
+              </div>
+              <div class="standard-cta-status">
+                <span class="standard-cta-status-dot"></span>
+                <span>3 Mobile Units In Your Area • Live Standby</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       PREMIUM SITE FOOTER (4 COLUMNS - STRICTLY MATCHING PROMPT)
+       1st: Brand Name, Paratext, 4 Social Icons
+       2nd: Services
+       3rd: Additional Links (Coming Soon, 404, Dashboard, Login, Pricing)
+       4th: Contact and Support (Mail Contact, Address, Timings)
+       ======================================================================== -->
+  <footer class="site-footer" id="mainFooter">
+    <div class="header-container footer-container">
+      <div class="footer-columns-grid">
+
+        <!-- Column 1: Brand Name, Paratext, Social Icons -->
+        <div class="footer-col footer-col-brand">
+          <div class="brand-identity footer-brand">
+            <div class="brand-logo-symbol">
+              <img src="logo.png" alt="VoltGuard Electrician &amp; Home Wiring Logo" class="brand-logo-img" width="56"
+                height="56">
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-title">Volt<span>Guard</span></span>
+              <span class="brand-subtitle">Electrician &amp; Home Wiring</span>
+            </div>
+          </div>
+          <p class="footer-description">
+            Dedicated to delivering dependable electrical solutions, certified residential wiring, switchboard repairs,
+            and safety inspections with master workmanship.
+          </p>
+          <div class="social-links-row" aria-label="Follow us on social channels">
+            <a href="#facebook" class="social-circle-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="#twitter" class="social-circle-btn" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+              </svg>
+            </a>
+            <a href="#instagram" class="social-circle-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#linkedin" class="social-circle-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Services -->
+        <div class="footer-col">
+          <h2 class="footer-heading">Services</h2>
+          <ul class="footer-nav-list">
+            <li><a href="service detail.html?service=wiring" class="footer-nav-link">Whole-Home Rewiring</a></li>
+            <li><a href="service detail.html?service=fan-light" class="footer-nav-link">Fan &amp; Light Fitting</a></li>
+            <li><a href="service detail.html?service=switchboard" class="footer-nav-link">Switchboard Repair</a></li>
+            <li><a href="service detail.html?service=emergency-diagnostics" class="footer-nav-link">Emergency
+                Diagnostics</a></li>
+            <li><a href="service detail.html?service=ev-charger" class="footer-nav-link">EV Charger Stations</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Additional Links (Coming Soon, 404, Dashboard, Login, Pricing) -->
+        <div class="footer-col">
+          <h2 class="footer-heading">Additional Links</h2>
+          <ul class="footer-nav-list">
+            <li><a href="#coming-soon" class="footer-nav-link open-coming-soon-btn">Coming Soon</a></li>
+            <li><a href="#404" class="footer-nav-link open-404-btn">404</a></li>
+            <li><a href="#dashboard" class="footer-nav-link open-dashboard-btn">Dashboard</a></li>
+            <li><a href="#login" class="footer-nav-link open-login-btn">Login</a></li>
+            <li><a href="pricing.html" class="footer-nav-link">Pricing</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact and Support (Mail Contact, Address, Timings) -->
+        <div class="footer-col footer-col-contact">
+          <h2 class="footer-heading">Contact and Support</h2>
+          <ul class="contact-details-list">
+            <li class="contact-item">
+              <span class="contact-icon-wrapper" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </span>
+              <div class="contact-text">
+                <a href="mailto:support@voltguard.example" class="contact-value">support@voltguard.example</a>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <span class="contact-icon-wrapper" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <div class="contact-text">
+                <span class="contact-value">742 Evergreen Terrace, Metro Circuit District</span>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <span class="contact-icon-wrapper" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </span>
+              <div class="contact-text">
+                <span class="contact-value">Mon – Sat: 7:00 AM – 8:00 PM (24/7 Emergency)</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div class="header-container footer-bottom-inner">
+        <p class="copyright-text">
+          &copy; <span id="currentYear"></span> VoltGuard Electrician &amp; Home Wiring Service. All Rights Reserved.
+        </p>
+        <div class="legal-links">
+          <a href="#privacy" class="legal-link">Privacy Policy</a>
+          <a href="#terms" class="legal-link">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       INTERACTIVE MODAL OVERLAYS
+       0. Quote & Service Booking Modal
+       1. Login Modal (Header Primary Button & Footer Link)
+       2. Dashboard Modal (Nav Link & Footer Link)
+       3. Coming Soon Modal (Footer Link)
+       4. 404 Preview Modal (Footer Link)
+       ======================================================================== -->
+
+  <!-- 0. INSTANT QUOTE & BOOKING MODAL -->
+  <div class="modal-backdrop" id="quoteModalBackdrop" aria-hidden="true">
+    <div class="modal-container login-modal-box" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+      <div class="modal-header">
+        <div class="login-modal-brand">
+          <img src="logo.png" alt="VoltGuard" class="modal-brand-logo-img" width="28" height="28">
+          <h3 class="modal-title" id="quoteModalTitle">Request Rapid Service Quote</h3>
+        </div>
+        <button type="button" class="modal-close-btn" id="quoteModalClose" aria-label="Close quote modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-intro-text">
+          Certified master electricians respond within 15 minutes. Upfront flat-rate pricing with 100% satisfaction
+          guarantee.
+        </p>
+
+        <form id="quoteModalForm" class="auth-form active-form">
+          <div class="form-group">
+            <label for="quoteServiceName" class="form-label">Service Required</label>
+            <select id="quoteServiceName" class="form-input" required>
+              <option value="Home Rewiring">Whole-Home Wiring &amp; Rewiring (From $280)</option>
+              <option value="Fan & Light Fitting">Fan &amp; Architectural Light Fitting (From $140)</option>
+              <option value="Switchboard Repair">Switchboard &amp; Breaker Repair (From $450)</option>
+              <option value="Emergency Repair">Emergency Fault Diagnostic (From $120)</option>
+              <option value="EV Charger Installation">EV Level 2 Charger Installation (From $450)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="quoteCustomerName" class="form-label">Your Name</label>
+            <input type="text" id="quoteCustomerName" class="form-input" placeholder="e.g. Alex Morgan" required>
+          </div>
+
+          <div class="form-group">
+            <label for="quoteCustomerPhone" class="form-label">Phone Number (For 15-min Dispatch)</label>
+            <input type="tel" id="quoteCustomerPhone" class="form-input" placeholder="(555) 234-5678" required>
+          </div>
+
+          <div class="form-group">
+            <label for="quoteCustomerZip" class="form-label">Service Zip Code or Neighborhood</label>
+            <input type="text" id="quoteCustomerZip" class="form-input" placeholder="e.g. 90210" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            <span>Get Instant Dispatch Quote</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. LOGIN MODAL -->
+  <div class="modal-backdrop" id="loginModalBackdrop" aria-hidden="true">
+    <div class="modal-container login-modal-box" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle">
+      <div class="modal-header">
+        <div class="login-modal-brand">
+          <img src="logo.png" alt="VoltGuard" class="modal-brand-logo-img" width="28" height="28">
+          <h3 class="modal-title" id="loginModalTitle">VoltGuard Account</h3>
+        </div>
+        <button type="button" class="modal-close-btn" id="loginModalClose" aria-label="Close login dialog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Auth Tabs (Sign In / Register) -->
+        <div class="auth-tabs-row" role="tablist">
+          <button type="button" class="auth-tab-btn active" id="tabSignInBtn" role="tab" aria-selected="true">Sign
+            In</button>
+          <button type="button" class="auth-tab-btn" id="tabSignUpBtn" role="tab" aria-selected="false">Create
+            Account</button>
+        </div>
+
+        <form id="loginForm" class="auth-form active-form">
+          <div class="form-group">
+            <label for="loginEmail" class="form-label">Email Address</label>
+            <input type="email" id="loginEmail" class="form-input" placeholder="name@example.com" required>
+          </div>
+          <div class="form-group">
+            <div class="form-label-row">
+              <label for="loginPassword" class="form-label">Password</label>
+              <a href="#forgot" class="form-forgot-link" id="forgotPasswordBtn">Forgot?</a>
+            </div>
+            <div class="password-input-wrap">
+              <input type="password" id="loginPassword" class="form-input" placeholder="••••••••" required>
+              <button type="button" class="toggle-password-btn" aria-label="Toggle password visibility">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="form-check-row">
+            <label class="checkbox-label">
+              <input type="checkbox" id="rememberMe">
+              <span>Remember Me</span>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <span>Sign In to Portal</span>
+          </button>
+        </form>
+
+        <form id="registerForm" class="auth-form" style="display: none;">
+          <div class="form-group">
+            <label for="regFullName" class="form-label">Full Name</label>
+            <input type="text" id="regFullName" class="form-input" placeholder="e.g. John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="regEmailInput" class="form-label">Email Address</label>
+            <input type="email" id="regEmailInput" class="form-input" placeholder="name@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="regPassInput" class="form-label">Create Password</label>
+            <div class="password-input-wrap">
+              <input type="password" id="regPassInput" class="form-input" placeholder="Minimum 8 characters" required>
+              <button type="button" class="toggle-password-btn" aria-label="Toggle password visibility">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top: 10px;">
+            <span>Create Account</span>
+          </button>
+        </form>
+
+        <div class="auth-divider">
+          <span>Or sign in with</span>
+        </div>
+
+        <div class="social-login-grid">
+          <button type="button" class="social-auth-btn" id="googleLoginBtn">
+            <span>Google</span>
+          </button>
+          <button type="button" class="social-auth-btn" id="appleLoginBtn">
+            <span>Apple ID</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. DASHBOARD MODAL -->
+  <div class="modal-backdrop" id="dashboardModalBackdrop" aria-hidden="true">
+    <div class="modal-container dashboard-modal-box" role="dialog" aria-modal="true" aria-labelledby="dashTitle">
+      <div class="modal-header">
+        <div class="dash-modal-header">
+          <span class="live-pulse"></span>
+          <h3 class="modal-title" id="dashTitle">Customer Service Dashboard</h3>
+        </div>
+        <button type="button" class="modal-close-btn" id="dashboardModalClose" aria-label="Close dashboard">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body dash-modal-body">
+        <div class="dash-metrics-grid">
+          <div class="dash-card">
+            <span class="dash-card-label">Main Circuit Status</span>
+            <span class="dash-card-val text-success">120V / 240V Stable</span>
+            <span class="dash-card-sub">Zero line faults detected</span>
+          </div>
+          <div class="dash-card">
+            <span class="dash-card-label">Active Work Order</span>
+            <span class="dash-card-val text-primary">#VG-8841</span>
+            <span class="dash-card-sub">Technician Dispatched (ETA 18m)</span>
+          </div>
+          <div class="dash-card">
+            <span class="dash-card-label">Safety Audit Certificate</span>
+            <span class="dash-card-val">Grade A+ (Current)</span>
+            <span class="dash-card-sub">Expires Oct 2027</span>
+          </div>
+        </div>
+
+        <div class="dash-booking-tracker">
+          <h4 class="dash-section-title">Active Service Dispatch Tracker</h4>
+          <div class="tracker-steps-row">
+            <div class="tracker-step completed">
+              <span class="tracker-dot">✓</span>
+              <span class="tracker-name">Request Received</span>
+            </div>
+            <div class="tracker-step active">
+              <span class="tracker-dot">⚡</span>
+              <span class="tracker-name">Technician En Route</span>
+            </div>
+            <div class="tracker-step">
+              <span class="tracker-dot">3</span>
+              <span class="tracker-name">On-Site Diagnosis</span>
+            </div>
+            <div class="tracker-step">
+              <span class="tracker-dot">4</span>
+              <span class="tracker-name">Certification</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-actions-row">
+          <a href="tel:+18005550199" class="btn btn-primary">
+            <span>Direct Call Dispatcher</span>
+          </a>
+          <button type="button" class="btn btn-secondary" id="dashDownloadCertBtn">
+            <span>Download Compliance PDF</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. COMING SOON MODAL -->
+  <div class="modal-backdrop" id="comingSoonModalBackdrop" aria-hidden="true">
+    <div class="modal-container simple-notice-box" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <h3 class="modal-title">Feature Coming Soon</h3>
+        <button type="button" class="modal-close-btn" id="comingSoonClose">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body text-center-modal">
+        <div class="modal-notice-icon">⚡</div>
+        <h4>Smart AI Electrical Diagnostics</h4>
+        <p>We are actively developing our real-time smart home electrical monitor and automated breaker diagnostics
+          integration. Stay tuned!</p>
+        <button type="button" class="btn btn-primary" id="comingSoonOkBtn">
+          <span>Got It</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. 404 PREVIEW MODAL -->
+  <div class="modal-backdrop" id="notFoundModalBackdrop" aria-hidden="true">
+    <div class="modal-container simple-notice-box" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <h3 class="modal-title">404 - Circuit Disconnected</h3>
+        <button type="button" class="modal-close-btn" id="notFoundClose">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body text-center-modal">
+        <div class="modal-notice-icon">⚠️</div>
+        <h4>Error 404: Line Tripped</h4>
+        <p>The page or circuit you are looking for has been moved, rewired, or no longer exists on this server.</p>
+        <a href="#home" class="btn btn-primary" id="notFoundHomeBtn">
+          <span>Return to Home 1</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification" role="alert" aria-live="polite">
+    <span class="toast-icon">⚡</span>
+    <span id="toastMessage">Action performed successfully!</span>
+  </div>
+
+  <!-- Master Interactive Scripts -->
+  <script src="standard_nav.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
