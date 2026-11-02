@@ -427,11 +427,116 @@
   }
 
   /* --------------------------------------------------------------------------
-     11. Initialization
+     11. Hero Discipline Pills & Monograph Showcase
+     -------------------------------------------------------------------------- */
+  function initHeroDisciplinePills() {
+    const pills = document.querySelectorAll('.discipline-pill');
+    const monographCard = document.getElementById('heroMonographCard');
+    const monographImg = document.getElementById('monographImg');
+    const badgeLeft = document.getElementById('monographBadgeLeft');
+    const badgeRight = document.getElementById('monographBadgeRight');
+    const categoryEl = document.getElementById('monographCategory');
+    const titleEl = document.getElementById('monographTitle');
+    const excerptEl = document.getElementById('monographExcerpt');
+    const authorRole = document.getElementById('monographAuthorRole');
+
+    if (!pills.length || !monographCard) return;
+
+    const DATA = {
+      'all': {
+        img: 'https://images.unsplash.com/photo-1615774925655-a0e97fc85c14?auto=format&fit=crop&w=900&q=85',
+        badgeL: 'FEATURED MONOGRAPH',
+        badgeR: '4.9 CODE AUDIT RATING',
+        category: 'COPPER INFRASTRUCTURE & SAFETY',
+        title: 'The Art of Calibrated Copper & Living Safety Standards',
+        excerpt: 'Uniting pure oxygen-free copper conduits with sub-degree thermal infrared audits for enduring architectural and household safety.',
+        role: '18 yr exp • Chief Master Wireman'
+      },
+      'rewiring': {
+        img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=900&q=80',
+        badgeL: 'MINIMAL INVASIVE',
+        badgeR: 'NEC 2024 COMPLIANT',
+        category: 'NON-INVASIVE REWIRING',
+        title: 'Surgical Cavity Wire Fishing & High-Amp Feeder Lines',
+        excerpt: 'Replacing brittle aluminum and knob-and-tube runs with 99.9% oxygen-free THHN copper conductors without wall demolition.',
+        role: '15 yr exp • Senior Rewiring Specialist'
+      },
+      'panels': {
+        img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80',
+        badgeL: 'REAL-TIME TELEMETRY',
+        badgeR: 'DUAL AFCI/GFCI READY',
+        category: 'AUTOMATED DISTRIBUTION',
+        title: 'Architectural Smart Panels & Real-Time Telemetry',
+        excerpt: 'Balancing split-phase current loads with computerized AFCI/GFCI breakers and automated battery storage shedding.',
+        role: '14 yr exp • Smart Infrastructure Lead'
+      },
+      'ev': {
+        img: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=80',
+        badgeL: 'LEVEL 2 HIGH-AMP',
+        badgeR: 'NACS & J1772 CERTIFIED',
+        category: 'HIGH-VOLTAGE MOBILITY',
+        title: 'Dedicated 240V Rapid EV Charging Architecture',
+        excerpt: 'Hardwired Level 2 charging stations with continuous-duty 50A/60A branch circuits and NEMA 4X weather protection.',
+        role: '12 yr exp • EV Charging Engineer'
+      },
+      'thermal': {
+        img: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80',
+        badgeL: 'FLIR MICRO-BOLOMETER',
+        badgeR: '±0.1°C CALIBRATION',
+        category: 'INFRARED SENSING',
+        title: 'Sub-Degree FLIR Thermography & Micro-Arc Isolation',
+        excerpt: 'Locating invisible hot spots, overloaded busbars, and latent ground faults before dangerous thermal runaway occurs.',
+        role: '16 yr exp • Certified Thermal Inspector'
+      },
+      'industrial': {
+        img: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=900&q=80',
+        badgeL: 'COMMERCIAL 480V',
+        badgeR: '22k AIC RATED',
+        category: 'THREE-PHASE POWER',
+        title: 'Heavy-Duty Industrial Switchboards & Harmonic Filtration',
+        excerpt: 'Engineered 480V/240V distribution for commercial complexes with zero operational downtime and emergency SLAs.',
+        role: '20 yr exp • Principal Electrical Engineer'
+      }
+    };
+
+    pills.forEach((pill) => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => {
+          p.classList.remove('active');
+          p.setAttribute('aria-selected', 'false');
+        });
+        pill.classList.add('active');
+        pill.setAttribute('aria-selected', 'true');
+
+        const discipline = pill.getAttribute('data-discipline') || 'all';
+        const item = DATA[discipline] || DATA['all'];
+
+        monographCard.style.opacity = '0.7';
+        monographCard.style.transform = 'translateY(2px)';
+
+        setTimeout(() => {
+          if (monographImg) monographImg.src = item.img;
+          if (badgeLeft) badgeLeft.textContent = item.badgeL;
+          if (badgeRight) badgeRight.textContent = item.badgeR;
+          if (categoryEl) categoryEl.textContent = item.category;
+          if (titleEl) titleEl.textContent = item.title;
+          if (excerptEl) excerptEl.textContent = item.excerpt;
+          if (authorRole) authorRole.textContent = item.role;
+
+          monographCard.style.opacity = '1';
+          monographCard.style.transform = 'translateY(0)';
+        }, 140);
+      });
+    });
+  }
+
+  /* --------------------------------------------------------------------------
+     12. Initialization
      -------------------------------------------------------------------------- */
   initTheme();
   initDirection();
   initTimelineInteractions();
+  initHeroDisciplinePills();
 
 })();
 

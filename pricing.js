@@ -440,11 +440,126 @@
   }
 
   /* --------------------------------------------------------------------------
+     11. Interactive 3D Tier Showcase Carousel
+     -------------------------------------------------------------------------- */
+  function initTierCarousel() {
+    const stage = document.getElementById('tierCarouselStage');
+    const cards = Array.from(document.querySelectorAll('.tier-showcase-card'));
+    const prevBtn = document.getElementById('carouselPrevBtn');
+    const nextBtn = document.getElementById('carouselNextBtn');
+    const dots = Array.from(document.querySelectorAll('.carousel-dot'));
+
+    if (!stage || cards.length === 0) return;
+
+    let currentIndex = 1; // Default to Center Card (Client Favorite, Card 2)
+    let autoPlayTimer = null;
+    const total = cards.length;
+
+    function updateCards(targetIndex) {
+      currentIndex = (targetIndex + total) % total;
+
+      cards.forEach((card, idx) => {
+        card.classList.remove('active', 'pos-left', 'pos-right');
+
+        if (idx === currentIndex) {
+          card.classList.add('active');
+        } else if (idx === (currentIndex - 1 + total) % total) {
+          card.classList.add('pos-left');
+        } else {
+          card.classList.add('pos-right');
+        }
+      });
+
+      // Update dots indicator
+      dots.forEach((dot, dotIdx) => {
+        if (dotIdx === currentIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    function nextSlide() {
+      updateCards(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      updateCards(currentIndex - 1);
+    }
+
+    // Button Listeners
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        nextSlide();
+        resetAutoPlay();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        prevSlide();
+        resetAutoPlay();
+      });
+    }
+
+    // Dot navigation
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        updateCards(idx);
+        resetAutoPlay();
+      });
+    });
+
+    // Allow clicking peeking side cards to bring them to focus
+    cards.forEach((card, idx) => {
+      card.addEventListener('click', (e) => {
+        // If clicking a link or button inside the active card, let it trigger normally
+        if (card.classList.contains('active')) return;
+
+        // If clicking peeking cards, navigate to it
+        e.preventDefault();
+        updateCards(idx);
+        resetAutoPlay();
+      });
+    });
+
+    // Auto-advance every 5.5s with hover pause
+    function startAutoPlay() {
+      if (autoPlayTimer) clearInterval(autoPlayTimer);
+      autoPlayTimer = setInterval(nextSlide, 5500);
+    }
+
+    function stopAutoPlay() {
+      if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = null;
+      }
+    }
+
+    function resetAutoPlay() {
+      stopAutoPlay();
+      startAutoPlay();
+    }
+
+    stage.addEventListener('mouseenter', stopAutoPlay);
+    stage.addEventListener('mouseleave', startAutoPlay);
+
+    // Initial state
+    updateCards(currentIndex);
+    startAutoPlay();
+  }
+
+  /* --------------------------------------------------------------------------
      Initialization
      -------------------------------------------------------------------------- */
   document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initDirection();
+    initTierCarousel();
   });
 
   // Expose global helpers

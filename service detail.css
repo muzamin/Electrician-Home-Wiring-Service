@@ -330,6 +330,16 @@ img {
   color: var(--color-primary);
   border: 1px solid var(--border-color);
   margin-bottom: 12px;
+  width: fit-content;
+  max-width: max-content;
+  align-self: flex-start;
+}
+
+.center-header .badge-pill,
+.section-intro-center .badge-pill {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .badge-secondary {
@@ -719,19 +729,29 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   5. SERVICE SWITCHER SUB-BAR (Interactive 6-Service Switcher)
+   5. SERVICE SWITCHER SUB-BAR (Interactive 6-Service Switcher - Positioned Below Hero)
    -------------------------------------------------------------------------- */
 .service-switcher-bar {
   background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   padding: 12px 0;
-  position: relative;
-  z-index: 90;
+  position: sticky;
+  top: var(--header-height, 68px);
+  z-index: 95;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .service-switcher-bar {
+  background-color: rgba(234, 248, 250, 0.98);
+  border-top: 1px solid rgba(0, 124, 145, 0.15);
+  border-bottom: 1px solid rgba(0, 124, 145, 0.15);
 }
 
 .switcher-scroll-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   overflow-x: auto;
   scrollbar-width: none;
@@ -782,7 +802,7 @@ img {
    6. BREADCRUMBS
    -------------------------------------------------------------------------- */
 .detail-breadcrumbs-bar {
-  padding: 16px 0 6px 0;
+  padding: 0 0 clamp(8px, 1.2vh, 14px) 0;
 }
 
 .breadcrumbs-list {
@@ -815,38 +835,54 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   7. DETAIL HERO STAGE (Section 1: Compact, Premium, Dynamic)
+   7. DETAIL HERO STAGE (Section 1: Compact, Premium, Dynamic - Fit In Screen)
    -------------------------------------------------------------------------- */
 .detail-hero-section {
-  padding: 30px 0 50px 0;
+  min-height: calc(100vh - var(--header-height, 68px));
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(10px, 1.8vh, 22px) 0 clamp(14px, 2.2vh, 26px) 0;
   position: relative;
   overflow: hidden;
+  background: radial-gradient(circle at 85% 20%, rgba(var(--color-primary-rgb), 0.08) 0%, transparent 60%);
 }
 
 .detail-hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 40px;
+  gap: clamp(24px, 3.2vw, 44px);
   align-items: center;
+  width: 100%;
 }
 
 .detail-hero-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  z-index: 2;
 }
 
 .detail-hero-badge {
-  margin-bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: clamp(6px, 1vh, 10px);
 }
 
 .detail-hero-title {
-  font-size: 2.35rem;
+  font-size: clamp(1.85rem, 2.35vw, 2.3rem);
   font-weight: 800;
   letter-spacing: -0.025em;
-  line-height: 1.18;
+  line-height: 1.16;
   color: var(--text-primary);
-  margin-bottom: 16px;
+  margin-bottom: clamp(8px, 1.2vh, 12px);
 }
 
 .detail-hero-title span {
@@ -854,31 +890,32 @@ img {
 }
 
 .detail-hero-desc {
-  font-size: 1.02rem;
+  font-size: clamp(0.88rem, 1vw, 0.98rem);
   color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 22px;
-  max-width: 600px;
+  line-height: 1.52;
+  margin-bottom: clamp(12px, 1.6vh, 18px);
+  max-width: 580px;
 }
 
 .detail-specs-pills-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 26px;
+  gap: 6px 10px;
+  margin-bottom: clamp(14px, 1.8vh, 20px);
 }
 
 .detail-spec-chip {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 12px;
+  padding: 5px 11px;
   border-radius: var(--radius-sm);
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 600;
   color: var(--text-primary);
+  line-height: 1.2;
 }
 
 .detail-spec-chip svg {
@@ -891,20 +928,28 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 24px;
+  gap: 12px;
+  margin-bottom: 0;
+}
+
+.detail-hero-actions .btn {
+  padding: 0 20px;
+  height: 42px;
+  font-size: 0.88rem;
 }
 
 .hotline-call-pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
+  padding: 7px 14px;
   border-radius: var(--radius-pill);
   background-color: var(--bg-surface-elevated);
   border: 1px solid var(--border-light);
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
+  height: 42px;
+  box-sizing: border-box;
 }
 
 .hotline-call-pill strong {
@@ -919,11 +964,12 @@ img {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  width: 100%;
 }
 
 .detail-hero-img-wrap {
   position: relative;
-  height: 380px;
+  height: clamp(280px, 38vh, 370px);
   overflow: hidden;
 }
 
@@ -941,11 +987,11 @@ img {
 .hero-visual-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(16, 28, 34, 0.1) 0%, rgba(16, 28, 34, 0.8) 100%);
+  background: linear-gradient(180deg, rgba(16, 28, 34, 0.08) 0%, rgba(16, 28, 34, 0.85) 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 24px;
+  padding: clamp(14px, 2vh, 20px);
 }
 
 .hero-telemetry-pill {
@@ -1967,6 +2013,15 @@ img {
    15. RESPONSIVE BREAKPOINTS
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
+  .detail-hero-section {
+    min-height: auto;
+    padding: 24px 0 36px 0;
+  }
+
+  .switcher-scroll-container {
+    justify-content: flex-start;
+  }
+
   .detail-hero-grid {
     grid-template-columns: 1fr;
     gap: 30px;

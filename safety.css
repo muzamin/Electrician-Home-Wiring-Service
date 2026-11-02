@@ -313,6 +313,16 @@ img {
   color: var(--color-primary);
   border: 1px solid var(--border-color);
   margin-bottom: 12px;
+  width: fit-content;
+  max-width: max-content;
+  align-self: flex-start;
+}
+
+.center-header .badge-pill,
+.section-intro-center .badge-pill {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .badge-secondary {
@@ -741,16 +751,21 @@ img {
    6. SECTION 1: HERO BANNER (Editorial Two-Column)
    -------------------------------------------------------------------------- */
 .safety-hero-section {
-  padding: 30px 0 55px 0;
+  min-height: calc(100vh - var(--header-height, 68px));
+  padding: clamp(12px, 2.5vh, 24px) 0 clamp(16px, 3vh, 28px) 0;
+  display: flex;
+  align-items: center;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .safety-hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 44px;
+  gap: 40px;
   align-items: center;
+  width: 100%;
 }
 
 .safety-hero-left {
@@ -759,17 +774,35 @@ img {
   align-items: flex-start;
 }
 
-.safety-eyebrow {
+/* Primary Color Badge Pill */
+.safety-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(var(--color-primary-rgb), 0.12);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.3);
+  border-radius: var(--radius-pill);
+  color: var(--color-primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   margin-bottom: 12px;
+  width: fit-content;
+}
+
+.safety-hero-badge span {
+  color: var(--color-primary);
 }
 
 .safety-hero-title {
-  font-size: 2.45rem;
+  font-size: clamp(2.05rem, 2.6vw, 2.5rem);
   font-weight: 800;
   letter-spacing: -0.025em;
-  line-height: 1.18;
+  line-height: 1.16;
   color: var(--text-primary);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .safety-hero-title span {
@@ -777,30 +810,30 @@ img {
 }
 
 .safety-hero-desc {
-  font-size: 1.02rem;
+  font-size: 0.94rem;
   color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 22px;
-  max-width: 620px;
+  line-height: 1.55;
+  margin-bottom: 18px;
+  max-width: 580px;
 }
 
 .safety-hero-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 22px;
+  gap: 12px;
+  margin-bottom: 18px;
 }
 
 .trust-indicator-strip {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 16px;
+  padding: 7px 16px;
   border-radius: var(--radius-pill);
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--text-secondary);
 }
@@ -828,7 +861,7 @@ img {
 
 .safety-hero-img-wrap {
   position: relative;
-  height: 380px;
+  height: clamp(320px, 40vh, 360px);
   overflow: hidden;
 }
 
@@ -1909,6 +1942,11 @@ img {
    14. RESPONSIVE BREAKPOINTS
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
+  .safety-hero-section {
+    min-height: auto;
+    padding: 36px 0 44px 0;
+  }
+
   .safety-hero-grid {
     grid-template-columns: 1fr;
     gap: 32px;

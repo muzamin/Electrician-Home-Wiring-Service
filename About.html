@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark" dir="ltr">
 
 <head>
@@ -285,115 +285,147 @@
   <main id="mainContent">
 
     <!-- ========================================================================
-         SECTION 1: PREMIUM ABOUT HERO BANNER
-         - Breadcrumbs & Verification Badge
-         - Compelling Headline & Narrative
-         - Quick Live Stats Strip
-         - Master Stage with Floating Glass Accents
+         SECTION 1: PREMIUM ABOUT HERO BANNER (Architectural Editorial Layout)
+         - Left: Layered Master Monograph Card Deck
+         - Right: Eyebrow Dashes, Editorial Headline, Specialization Pills, Actions, Stats
          ======================================================================== -->
     <section class="about-hero-section" id="aboutHero" aria-label="About VoltGuard Electrical">
       <div class="about-container">
 
-        <!-- Breadcrumbs -->
-        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-          <a href="index.html" class="breadcrumb-link">Home</a>
-          <svg class="breadcrumb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-          <span class="breadcrumb-current">About Us</span>
-        </nav>
+        <div class="about-hero-editorial-grid">
 
-        <div class="about-hero-grid">
+          <!-- Left Column: Layered Master Monograph Card Deck -->
+          <div class="hero-card-stack-deck">
+            <!-- Subtle Background Layers for Depth -->
+            <div class="hero-deck-layer hero-deck-layer-2" aria-hidden="true"></div>
+            <div class="hero-deck-layer hero-deck-layer-1" aria-hidden="true"></div>
 
-          <!-- Left: Hero Text & Metrics -->
-          <div class="about-hero-content">
-            <div class="section-badge">
-              <span>⚡ 18+ YEARS OF LICENSED ELECTRICAL EXCELLENCE</span>
-            </div>
-
-            <h1 class="about-hero-title">
-              Pioneering Safe, Resilient <span>Electrical &amp; Home Wiring</span> Solutions
-            </h1>
-
-            <p class="about-hero-desc">
-              VoltGuard was founded on an uncompromising principle: every electrical connection must be robust,
-              code-compliant,
-              and completely free of hazard. Today, our certified master wiremen and electrical engineers power
-              thousands
-              of residences and commercial facilities with benchmark safety standards.
-            </p>
-
-            <div class="about-hero-actions">
-              <button type="button" class="btn btn-primary open-quote-modal-btn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-                <span>Schedule a Safety Audit</span>
-              </button>
-
-              <a href="#timeline" class="btn btn-outline">
-                <span>Explore Timeline</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
-            </div>
-
-            <!-- Stats Strip in Hero -->
-            <div class="about-stats-strip">
-              <div class="stat-item-box">
-                <span class="stat-number">15,400+</span>
-                <span class="stat-label">Homes Rewired</span>
+            <!-- Front Featured Card -->
+            <div class="hero-monograph-card" id="heroMonographCard">
+              <div class="monograph-image-wrap">
+                <img id="monographImg"
+                  src="https://images.unsplash.com/photo-1615774925655-a0e97fc85c14?auto=format&fit=crop&w=900&q=85"
+                  alt="Certified Master Electrician conducting high-precision electrical diagnostics"
+                  loading="eager"
+                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1660330589693-99889d60181e?auto=format&fit=crop&w=900&q=85';">
+                
+                <!-- Floating Glass Overlays -->
+                <div class="monograph-badge-overlay overlay-top-left">
+                  <span class="star-icon">★</span>
+                  <span id="monographBadgeLeft">FEATURED MONOGRAPH</span>
+                </div>
+                <div class="monograph-badge-overlay overlay-top-right">
+                  <span class="star-icon">★</span>
+                  <span id="monographBadgeRight">4.9 CODE AUDIT RATING</span>
+                </div>
               </div>
-              <div class="stat-item-box">
-                <span class="stat-number">100%</span>
-                <span class="stat-label">Master Licensed</span>
+
+              <div class="monograph-body">
+                <div class="monograph-category" id="monographCategory">COPPER INFRASTRUCTURE &amp; SAFETY</div>
+                <h3 class="monograph-title" id="monographTitle">The Art of Calibrated Copper &amp; Living Safety Standards</h3>
+                <p class="monograph-excerpt" id="monographExcerpt">
+                  Uniting pure oxygen-free copper conduits with sub-degree thermal infrared audits for enduring architectural and household safety.
+                </p>
               </div>
-              <div class="stat-item-box">
-                <span class="stat-number">&lt; 20m</span>
-                <span class="stat-label">Emergency Dispatch</span>
-              </div>
-              <div class="stat-item-box">
-                <span class="stat-number">0</span>
-                <span class="stat-label">Safety Deficiencies</span>
+
+              <div class="monograph-footer">
+                <div class="monograph-author">
+                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80"
+                    alt="Julian Vance - Master Wireman" class="author-avatar" width="38" height="38">
+                  <div class="author-info">
+                    <span class="author-name" id="monographAuthorName">Julian Vance</span>
+                    <span class="author-role" id="monographAuthorRole">18 yr exp • Chief Master Wireman</span>
+                  </div>
+                </div>
+                <a href="#missionSection" class="btn-monograph-action" id="monographActionBtn" aria-label="Explore Monograph Story">
+                  <span>Explore</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- Right: Visual Stage -->
-          <div class="hero-visual-stage">
-            <div class="visual-image-card">
-              <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1000&q=85"
-                alt="Licensed Master Electrician conducting high-precision breaker diagnostics" loading="eager"
-                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=85';">
-              <div class="visual-glass-overlay"></div>
+          <!-- Right Column: Editorial Narrative, Filter Pills, Actions & Stats Strip -->
+          <div class="hero-editorial-content">
+
+            <!-- Blue Badge with Blue Text -->
+            <div class="section-badge hero-editorial-badge">
+              <span>⚡ ELECTRICAL INFRASTRUCTURE • 18-YEAR CODE MASTERY</span>
             </div>
 
-            <!-- Floating Glass Badges -->
-            <div class="floating-glass-badge badge-top-right">
-              <div class="badge-icon-box">🛡️</div>
-              <div>
-                <div class="badge-title-txt">NEC 2024 Compliant</div>
-                <div class="badge-sub-txt">100% Code Verified</div>
+            <!-- Main Headline with Gradient Word Highlight -->
+            <h1 class="hero-editorial-title">
+              Forging <span class="gradient-text">Architectural Legacies</span> of Electrical Mastery
+            </h1>
+
+            <!-- Narrative Description -->
+            <p class="hero-editorial-desc">
+              Explore the technical precision, certified conductor integrity, and thermal diagnostic engineering behind our dual-discipline electrical practice. From whole-home copper rewiring to high-capacity smart panel automation, we equip every build with lasting structural resilience and timeless safety.
+            </p>
+
+            <!-- Specialization / Disciplines Filter Pills Row -->
+            <div class="hero-discipline-pills" role="tablist" aria-label="Electrical Specialization Disciplines">
+              <button type="button" class="discipline-pill active" data-discipline="all" role="tab" aria-selected="true">
+                All Disciplines
+              </button>
+              <button type="button" class="discipline-pill" data-discipline="rewiring" role="tab" aria-selected="false">
+                Whole-Home Rewiring
+              </button>
+              <button type="button" class="discipline-pill" data-discipline="panels" role="tab" aria-selected="false">
+                Smart Load Centers
+              </button>
+              <button type="button" class="discipline-pill" data-discipline="ev" role="tab" aria-selected="false">
+                EV Infrastructure
+              </button>
+              <button type="button" class="discipline-pill" data-discipline="thermal" role="tab" aria-selected="false">
+                Thermal Diagnostics
+              </button>
+              <button type="button" class="discipline-pill" data-discipline="industrial" role="tab" aria-selected="false">
+                Commercial 3-Phase
+              </button>
+            </div>
+
+            <!-- Action Buttons Row -->
+            <div class="hero-action-cluster">
+              <a href="book-a-service.html" class="btn btn-primary hero-editorial-btn-primary">
+                <span>EXPLORE ELECTRICAL STANDARDS</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+
+              <a href="#timeline" class="btn btn-outline hero-editorial-btn-secondary">
+                <span>ATELIER HERITAGE</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <!-- 3-Column Stats Counter Strip with Vertical Dividers -->
+            <div class="hero-stats-counter-strip">
+              <div class="hero-stat-block">
+                <span class="hero-stat-value">18+</span>
+                <span class="hero-stat-label">YEARS ELECTRICAL HERITAGE</span>
               </div>
-            </div>
-
-            <div class="floating-glass-badge badge-bottom-left">
-              <div class="badge-icon-box">⚡</div>
-              <div>
-                <div class="badge-title-txt">Thermal Scanned</div>
-                <div class="badge-sub-txt">Fluke FLIR Inspected</div>
+              <div class="stat-vertical-divider" aria-hidden="true"></div>
+              <div class="hero-stat-block">
+                <span class="hero-stat-value">15,400+</span>
+                <span class="hero-stat-label">CERTIFIED RESIDENTIAL REWIRES</span>
+              </div>
+              <div class="stat-vertical-divider" aria-hidden="true"></div>
+              <div class="hero-stat-block">
+                <span class="hero-stat-value">100%</span>
+                <span class="hero-stat-label">FIRST-PASS CODE AUDIT PURITY</span>
               </div>
             </div>
 
           </div>
 
         </div>
+
       </div>
     </section>
 
@@ -560,7 +592,7 @@
 
           <!-- Right: Image Card -->
           <div class="side-image-wrap">
-            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80"
+            <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=900&q=80"
               alt="Next-generation smart electrical panel and connected home infrastructure" loading="lazy">
             <div class="floating-glass-badge badge-top-right">
               <div class="badge-icon-box">🌐</div>

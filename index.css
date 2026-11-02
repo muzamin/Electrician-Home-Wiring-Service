@@ -2132,6 +2132,8 @@ img {
   padding: 6px 14px;
   border-radius: var(--radius-pill);
   margin-bottom: 20px;
+  width: fit-content;
+  max-width: max-content;
 }
 
 .live-dot-pulse {

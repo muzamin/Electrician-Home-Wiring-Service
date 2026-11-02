@@ -317,6 +317,16 @@ img {
   color: var(--color-primary);
   border: 1px solid var(--border-color);
   margin-bottom: 12px;
+  width: fit-content;
+  max-width: max-content;
+  align-self: flex-start;
+}
+
+.center-header .badge-pill,
+.section-intro-center .badge-pill {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .badge-secondary {
@@ -742,150 +752,511 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   6. SECTION 1: PREMIUM HERO BANNER
+   6. SECTION 1: PREMIUM HERO BANNER (Command Dispatch Console - "WOW" Effect)
    -------------------------------------------------------------------------- */
 .contact-hero-section {
-  padding: 30px 0 55px 0;
+  min-height: calc(100vh - var(--header-height, 68px));
+  padding: clamp(10px, 2.5vh, 24px) 0 clamp(16px, 3vh, 28px) 0;
+  display: flex;
+  align-items: center;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
+  background: radial-gradient(circle at 15% 20%, rgba(var(--color-primary-rgb), 0.09) 0%, transparent 60%),
+              radial-gradient(circle at 85% 80%, rgba(var(--color-secondary-rgb), 0.05) 0%, transparent 50%);
 }
 
 .contact-hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 44px;
+  gap: 40px;
   align-items: center;
+  width: 100%;
 }
 
 .contact-hero-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  z-index: 2;
 }
 
-.contact-hero-title {
-  font-size: 2.45rem;
+/* Primary Color Badge Pill with Pulsing Dot */
+.contact-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(var(--color-primary-rgb), 0.12);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.3);
+  border-radius: var(--radius-pill);
+  color: var(--color-primary);
+  font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: -0.025em;
-  line-height: 1.18;
-  color: var(--text-primary);
-  margin-bottom: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  width: fit-content;
 }
 
-.contact-hero-title span {
+.contact-hero-badge span {
   color: var(--color-primary);
 }
 
+.live-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10B981;
+  box-shadow: 0 0 10px #10B981;
+  display: inline-block;
+  animation: liveBlink 1.8s infinite ease-in-out;
+}
+
+@keyframes liveBlink {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+}
+
+.contact-hero-title {
+  font-size: clamp(2.05rem, 2.6vw, 2.55rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.16;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.contact-hero-title .gradient-text {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .contact-hero-desc {
-  font-size: 1.02rem;
+  font-size: 0.93rem;
   color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 22px;
-  max-width: 620px;
+  line-height: 1.55;
+  margin-bottom: 18px;
+  max-width: 560px;
 }
 
-.contact-chips-row {
+/* 3-Channel Live Dispatch Matrix */
+.dispatch-channels-matrix {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 28px;
+  flex-direction: column;
+  gap: 9px;
+  width: 100%;
+  max-width: 540px;
+  margin-bottom: 20px;
 }
 
-.contact-chip {
-  display: inline-flex;
+.dispatch-channel-card {
+  display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  border-radius: var(--radius-sm);
-  background-color: var(--bg-surface);
+  gap: 14px;
+  padding: 10px 14px;
+  background: var(--bg-surface);
   border: 1px solid var(--border-color);
-  font-size: 0.8rem;
-  font-weight: 600;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.dispatch-channel-card:hover {
+  border-color: var(--color-primary);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+
+.dispatch-channel-card.highlight-card {
+  border-left: 3px solid var(--color-primary);
+}
+
+.channel-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: rgba(var(--color-primary-rgb), 0.12);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.dispatch-channel-card:hover .channel-icon-wrap {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.channel-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.channel-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.channel-title {
+  font-size: 0.86rem;
+  font-weight: 750;
   color: var(--text-primary);
 }
 
-.contact-chip svg {
-  width: 14px;
-  height: 14px;
-  color: var(--color-secondary);
+.channel-pill {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface-elevated);
+  color: var(--text-muted);
+  border: 1px solid var(--border-light);
+  letter-spacing: 0.04em;
 }
 
+.channel-pill.live-pill {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10B981;
+  border-color: rgba(16, 185, 129, 0.28);
+}
+
+.channel-pill.verified-pill {
+  background: rgba(var(--color-primary-rgb), 0.12);
+  color: var(--color-primary);
+  border-color: rgba(var(--color-primary-rgb), 0.28);
+}
+
+.channel-detail {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+/* Dual Action CTAs - Pill Style Matching Reference */
 .contact-hero-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 20px;
+  gap: 12px;
 }
 
-.hotline-call-pill {
+.btn-contact-primary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 8px 16px;
+  padding: 10px 24px;
+  background-color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-weight: 700;
   border-radius: var(--radius-pill);
-  background-color: var(--bg-surface-elevated);
-  border: 1px solid var(--border-light);
-  font-size: 0.84rem;
-  color: var(--text-secondary);
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(var(--color-primary-rgb), 0.35);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  line-height: 1.2;
 }
 
-.hotline-call-pill strong {
-  color: var(--color-secondary);
+.btn-contact-primary:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(var(--color-primary-rgb), 0.50);
+  color: #FFFFFF;
 }
 
-/* Contact Hero Right - Visual Showcase Card */
-.contact-hero-visual-card {
+.btn-contact-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background-color: transparent;
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--color-primary);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.btn-contact-secondary:hover {
+  background-color: rgba(var(--color-primary-rgb), 0.12);
+  border-color: var(--color-primary-hover);
+  color: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   RIGHT COLUMN: DIMENSIONAL DISPATCH COMMAND CONSOLE ("WOW" VISUAL)
+   -------------------------------------------------------------------------- */
+.contact-hero-console-wrap {
   position: relative;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  width: 100%;
 }
 
-.contact-hero-img-wrap {
+.dispatch-console-card {
   position: relative;
-  height: 380px;
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45), 0 0 24px rgba(var(--color-primary-rgb), 0.15);
+  transition: all var(--transition-normal);
+}
+
+.dispatch-console-card:hover {
+  border-color: rgba(var(--color-primary-rgb), 0.45);
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.55), 0 0 32px rgba(var(--color-primary-rgb), 0.22);
+}
+
+.console-media-frame {
+  position: relative;
+  height: clamp(340px, 44vh, 390px);
   overflow: hidden;
 }
 
-.contact-hero-img {
+.console-main-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-slow);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.contact-hero-visual-card:hover .contact-hero-img {
+.dispatch-console-card:hover .console-main-img {
   transform: scale(1.03);
 }
 
-.contact-visual-overlay {
+.console-gradient-veil {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(16, 28, 34, 0.15) 0%, rgba(16, 28, 34, 0.88) 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 24px;
+  background: linear-gradient(180deg, rgba(16, 28, 34, 0.2) 0%, rgba(16, 28, 34, 0.35) 45%, rgba(16, 28, 34, 0.94) 100%);
+  pointer-events: none;
 }
 
-.contact-telemetry-pill {
+/* Floating Live Telemetry HUD (Top-Right) */
+.console-hud-badge {
   position: absolute;
-  top: 18px;
-  right: 18px;
-  background: rgba(16, 28, 34, 0.9);
-  border: 1px solid var(--border-color);
-  backdrop-filter: blur(8px);
-  padding: 6px 14px;
-  border-radius: var(--radius-pill);
+  top: 16px;
+  right: 16px;
+  background: rgba(16, 28, 34, 0.88);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.35);
+  backdrop-filter: blur(10px);
+  padding: 7px 14px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 3;
+}
+
+.hud-status-line {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.76rem;
-  font-weight: 700;
+  gap: 6px;
+}
+
+.hud-status-txt {
+  font-size: 0.72rem;
+  font-weight: 800;
   color: #FFFFFF;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hud-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  animation: liveBlink 1.8s infinite ease-in-out;
+}
+
+.hud-sub-txt {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+}
+
+/* Floating Master Wireman On-Call Badge (Bottom-Left) */
+.console-wireman-badge {
+  position: absolute;
+  bottom: 66px;
+  left: 16px;
+  background: rgba(16, 28, 34, 0.88);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.35);
+  backdrop-filter: blur(10px);
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 3;
+}
+
+.wireman-avatar-ring {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(var(--color-primary-rgb), 0.2);
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.wireman-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.wireman-name {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.wireman-role {
+  font-size: 0.68rem;
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+/* Bottom Glass KPI Strip */
+.console-kpi-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(16, 28, 34, 0.94);
+  border-top: 1px solid rgba(var(--color-primary-rgb), 0.2);
+  backdrop-filter: blur(12px);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 3;
+}
+
+.console-kpi-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.kpi-num {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.1;
+}
+
+.kpi-lbl {
+  font-size: 0.66rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.console-kpi-sep {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .contact-hero-section {
+    min-height: auto;
+    padding: 36px 0 44px 0;
+  }
+  .contact-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .contact-hero-left {
+    align-items: center;
+    text-align: center;
+  }
+  .contact-hero-desc {
+    max-width: 100%;
+  }
+  .dispatch-channels-matrix {
+    max-width: 100%;
+  }
+  .contact-hero-actions {
+    justify-content: center;
+  }
+  .console-media-frame {
+    height: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-hero-title {
+    font-size: 1.85rem;
+  }
+  .console-media-frame {
+    height: 280px;
+  }
+  .console-wireman-badge {
+    display: none;
+  }
+  .kpi-num {
+    font-size: 1rem;
+  }
+  .kpi-lbl {
+    font-size: 0.6rem;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] .contact-hero-badge {
+  direction: rtl;
+}
+[dir="rtl"] .dispatch-channel-card.highlight-card {
+  border-left: 1px solid var(--border-color);
+  border-right: 3px solid var(--color-primary);
+}
+[dir="rtl"] .dispatch-channel-card:hover {
+  transform: translateX(-4px);
+}
+[dir="rtl"] .console-hud-badge {
+  right: auto;
+  left: 16px;
+}
+[dir="rtl"] .console-wireman-badge {
+  left: auto;
+  right: 16px;
 }
 
 .pulse-indicator {
