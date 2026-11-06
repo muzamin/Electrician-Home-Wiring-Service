@@ -233,14 +233,14 @@
   function openDropdown() {
     if (!homeDropdownParent || !homeDropdownBtn) return;
     isDropdownOpen = true;
-    homeDropdownParent.classList.add('open');
+    homeDropdownParent.classList.add('open', 'active');
     homeDropdownBtn.setAttribute('aria-expanded', 'true');
   }
 
   function closeDropdown() {
     if (!homeDropdownParent || !homeDropdownBtn) return;
     isDropdownOpen = false;
-    homeDropdownParent.classList.remove('open');
+    homeDropdownParent.classList.remove('open', 'active');
     homeDropdownBtn.setAttribute('aria-expanded', 'false');
   }
 
@@ -285,8 +285,8 @@
      -------------------------------------------------------------------------- */
   function openMobileDrawer() {
     if (!mobileDrawer || !mobileDrawerBackdrop) return;
-    mobileDrawer.classList.add('active');
-    mobileDrawerBackdrop.classList.add('active');
+    mobileDrawer.classList.add('active', 'open');
+    mobileDrawerBackdrop.classList.add('active', 'open');
     mobileDrawerBackdrop.setAttribute('aria-hidden', 'false');
     if (mobileMenuToggle) mobileMenuToggle.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
@@ -294,8 +294,8 @@
 
   function closeMobileDrawer() {
     if (!mobileDrawer || !mobileDrawerBackdrop) return;
-    mobileDrawer.classList.remove('active');
-    mobileDrawerBackdrop.classList.remove('active');
+    mobileDrawer.classList.remove('active', 'open');
+    mobileDrawerBackdrop.classList.remove('active', 'open');
     mobileDrawerBackdrop.setAttribute('aria-hidden', 'true');
     if (mobileMenuToggle) mobileMenuToggle.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';

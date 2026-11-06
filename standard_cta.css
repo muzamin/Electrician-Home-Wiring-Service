@@ -452,6 +452,28 @@
   }
 }
 
+@media (max-width: 480px) {
+  .standard-cta-card {
+    padding: 22px 16px;
+    border-radius: 18px;
+  }
+
+  .standard-cta-heading {
+    font-size: 1.2rem;
+  }
+
+  .standard-cta-guarantees {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .standard-cta-guarantee-pill {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
 /* --------------------------------------------------------------------------
    7. RTL Direction Support
    -------------------------------------------------------------------------- */

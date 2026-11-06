@@ -2918,14 +2918,12 @@ button {
   z-index: 1090;
   background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(4px);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity var(--transition-normal), visibility var(--transition-normal);
+  display: none;
 }
 
-.mobile-drawer-backdrop.active {
-  opacity: 1;
-  visibility: visible;
+.mobile-drawer-backdrop.active,
+.mobile-drawer-backdrop.open {
+  display: block;
 }
 
 .mobile-drawer {
@@ -2939,9 +2937,7 @@ button {
   background: var(--bg-surface);
   border-left: 1px solid var(--border-color);
   padding: 24px;
-  transform: translateX(100%);
-  transition: transform var(--transition-normal);
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 
@@ -2950,11 +2946,11 @@ button {
   left: 0;
   border-left: none;
   border-right: 1px solid var(--border-color);
-  transform: translateX(-100%);
 }
 
-.mobile-drawer.active {
-  transform: translateX(0);
+.mobile-drawer.active,
+.mobile-drawer.open {
+  display: flex;
 }
 
 .mobile-drawer-header {

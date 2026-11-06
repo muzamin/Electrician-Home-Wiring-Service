@@ -1096,13 +1096,15 @@ img {
   width: 100%;
   max-width: 480px;
   height: 440px;
+  overflow: hidden;
 }
 
 .hero-arc-layer {
   position: absolute;
-  inset: -10% -10% -10% -10%;
+  inset: 0;
   pointer-events: none;
   z-index: 1;
+  overflow: hidden;
 }
 
 .hero-arc-svg {
@@ -2804,7 +2806,13 @@ img {
   }
 
   .specialized-layout-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
+  }
+
+  .specialized-content-col {
+    min-width: 0;
+    max-width: 100%;
   }
 
   .services-3-grid,
@@ -2882,6 +2890,48 @@ img {
     position: static;
     margin: 8px 0;
   }
+
+  .contact-box-inner {
+    grid-template-columns: 1fr;
+    padding: 24px 16px;
+    gap: 20px;
+  }
+
+  .contact-quick-card {
+    padding: 14px 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-section {
+    padding: 24px 0 36px 0;
+  }
+
+  .hero-dual-visual {
+    height: 280px;
+  }
+
+  .hero-subfeatures-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .hero-stats-bar {
+    padding: 12px 14px;
+    width: 100%;
+  }
+
+  .contact-box-inner {
+    padding: 18px 12px;
+    border-radius: var(--radius-lg);
+  }
+
+  .contact-quick-card {
+    padding: 12px 10px;
+    gap: 12px;
+  }
 }
 
 /* Mobile Drawer Styles */
@@ -2895,9 +2945,11 @@ img {
   transition: all var(--transition-normal);
 }
 
-.mobile-drawer-backdrop.active {
+.mobile-drawer-backdrop.active,
+.mobile-drawer-backdrop.open {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .mobile-drawer {
@@ -2911,15 +2963,14 @@ img {
   border-left: 1px solid var(--border-color);
   z-index: 1600;
   padding: 24px;
-  display: flex;
+  display: none;
   flex-direction: column;
-  transform: translateX(100%);
-  transition: transform var(--transition-normal);
   overflow-y: auto;
 }
 
-.mobile-drawer.active {
-  transform: translateX(0);
+.mobile-drawer.active,
+.mobile-drawer.open {
+  display: flex;
 }
 
 .mobile-drawer-header {

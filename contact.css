@@ -1353,7 +1353,13 @@ img {
   align-items: flex-start;
   gap: 16px;
   flex: 1;
+  min-width: 0;
   transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.address-card-content {
+  min-width: 0;
+  flex: 1;
 }
 
 .address-info-card:hover {
@@ -1402,6 +1408,8 @@ img {
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 6px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .address-card-detail {
@@ -1409,6 +1417,8 @@ img {
   color: var(--text-secondary);
   line-height: 1.5;
   margin-bottom: 8px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .address-card-action-link {
@@ -2080,14 +2090,12 @@ img {
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
   z-index: 1500;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity var(--transition-fast), visibility var(--transition-fast);
+  display: none;
 }
 
-.mobile-drawer-backdrop.open {
-  opacity: 1;
-  visibility: visible;
+.mobile-drawer-backdrop.open,
+.mobile-drawer-backdrop.active {
+  display: block;
 }
 
 .mobile-drawer {
@@ -2095,27 +2103,26 @@ img {
   top: 0;
   left: 0;
   width: 300px;
+  max-width: 85vw;
   height: 100%;
   background-color: var(--bg-surface);
   border-right: 1px solid var(--border-color);
   box-shadow: var(--shadow-lg);
   z-index: 1600;
-  transform: translateX(-100%);
-  transition: transform var(--transition-normal);
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 
 [dir="rtl"] .mobile-drawer {
   left: auto;
   right: 0;
-  transform: translateX(100%);
   border-right: none;
   border-left: 1px solid var(--border-color);
 }
 
-.mobile-drawer.open {
-  transform: translateX(0);
+.mobile-drawer.open,
+.mobile-drawer.active {
+  display: flex;
 }
 
 .mobile-drawer-header {
@@ -2233,7 +2240,8 @@ img {
   }
 
   .contact-hub-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
     gap: 32px;
   }
 
@@ -2311,5 +2319,48 @@ img {
     flex-direction: column;
     gap: 12px;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .contact-form-card {
+    padding: 20px 14px;
+    border-radius: var(--radius-md);
+  }
+
+  .address-info-card {
+    padding: 16px 14px;
+    gap: 12px;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .address-cards-stack,
+  .address-card-content {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .address-card-detail,
+  .address-card-detail strong,
+  .address-card-detail a {
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+  }
+
+  .contact-hero-section {
+    padding: 36px 0;
+  }
+
+  .contact-hero-title {
+    font-size: 1.65rem;
   }
 }

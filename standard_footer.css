@@ -144,6 +144,52 @@
 }
 
 /* --------------------------------------------------------------------------
+   Responsive Footer Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .footer-columns-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-container {
+    padding-top: 32px;
+    padding-bottom: 24px;
+  }
+
+  .footer-columns-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-description {
+    max-width: 100%;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .legal-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .legal-links {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
    16. MODALS SYSTEM
    -------------------------------------------------------------------------- */
 

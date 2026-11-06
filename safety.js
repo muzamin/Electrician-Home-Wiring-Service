@@ -193,12 +193,12 @@
     });
 
     function openDropdown() {
-      homeDropdownParent.classList.add('active');
+      homeDropdownParent.classList.add('active', 'open');
       homeDropdownBtn.setAttribute('aria-expanded', 'true');
     }
 
     function closeDropdown() {
-      homeDropdownParent.classList.remove('active');
+      homeDropdownParent.classList.remove('active', 'open');
       homeDropdownBtn.setAttribute('aria-expanded', 'false');
     }
 
@@ -227,16 +227,16 @@
      -------------------------------------------------------------------------- */
   function openMobileDrawer() {
     if (!mobileDrawer || !mobileDrawerBackdrop) return;
-    mobileDrawer.classList.add('open');
-    mobileDrawerBackdrop.classList.add('open');
+    mobileDrawer.classList.add('open', 'active');
+    mobileDrawerBackdrop.classList.add('open', 'active');
     document.body.style.overflow = 'hidden';
     if (mobileMenuToggle) mobileMenuToggle.setAttribute('aria-expanded', 'true');
   }
 
   function closeMobileDrawer() {
     if (!mobileDrawer || !mobileDrawerBackdrop) return;
-    mobileDrawer.classList.remove('open');
-    mobileDrawerBackdrop.classList.remove('open');
+    mobileDrawer.classList.remove('open', 'active');
+    mobileDrawerBackdrop.classList.remove('open', 'active');
     document.body.style.overflow = '';
     if (mobileMenuToggle) mobileMenuToggle.setAttribute('aria-expanded', 'false');
   }

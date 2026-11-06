@@ -876,14 +876,12 @@ img {
   background: rgba(14, 11, 18, 0.75);
   backdrop-filter: blur(4px);
   z-index: 1090;
-  opacity: 0;
-  visibility: hidden;
-  transition: all var(--transition-normal);
+  display: none;
 }
 
-.mobile-drawer-backdrop.active {
-  opacity: 1;
-  visibility: visible;
+.mobile-drawer-backdrop.active,
+.mobile-drawer-backdrop.open {
+  display: block;
 }
 
 .mobile-drawer {
@@ -897,9 +895,7 @@ img {
   background: var(--bg-surface);
   border-left: 1px solid var(--border-color);
   padding: 24px;
-  transform: translateX(100%);
-  transition: transform var(--transition-normal);
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 
@@ -908,11 +904,11 @@ img {
   left: 0;
   border-left: none;
   border-right: 1px solid var(--border-color);
-  transform: translateX(-100%);
 }
 
-.mobile-drawer.active {
-  transform: translateX(0);
+.mobile-drawer.active,
+.mobile-drawer.open {
+  display: flex;
 }
 
 .mobile-drawer-header {
